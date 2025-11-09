@@ -1,564 +1,877 @@
-import { Provider } from '@/types';
+import { Provider, Hotel, Restaurant, ScubaOperator, BoatingOperator, Amenity } from '@/types';
 
-export const allProviders: Provider[] = [
-  // Hotels
+// Common amenities
+const hotelAmenities: Amenity[] = [
+  { id: 'wifi', name: 'Free WiFi', icon: 'wifi', category: 'basic' },
+  { id: 'ac', name: 'Air Conditioning', icon: 'snowflake', category: 'basic' },
+  { id: 'parking', name: 'Free Parking', icon: 'car', category: 'basic' },
+  { id: 'restaurant', name: 'Restaurant', icon: 'utensils', category: 'basic' },
+  { id: 'pool', name: 'Swimming Pool', icon: 'waves', category: 'premium' },
+  { id: 'spa', name: 'Spa & Wellness', icon: 'flower', category: 'premium' },
+  { id: 'gym', name: 'Fitness Center', icon: 'dumbbell', category: 'premium' },
+  { id: 'beach', name: 'Beach Access', icon: 'umbrella', category: 'premium' },
+  { id: 'security', name: '24/7 Security', icon: 'shield', category: 'safety' },
+  { id: 'accessible', name: 'Wheelchair Accessible', icon: 'accessibility', category: 'accessibility' },
+];
+
+// Hotels data
+const hotels: Hotel[] = [
   {
     id: 'hotel-1',
     type: 'hotel',
     name: 'RNS Residency',
     slug: 'rns-residency',
-    description: 'A comfortable stay with modern amenities and beautiful sea views, located near the famous Murudeshwar temple.',
-    shortDescription: 'Modern hotel with sea views',
+    description: 'A comfortable mid-range hotel with excellent amenities and proximity to the temple.',
+    shortDescription: 'Comfortable hotel near temple',
     category: 'mid-range',
     images: [
       {
-        id: 'img-1',
+        id: 'img1',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
+        url: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
         alt: 'RNS Residency exterior',
-        isPrimary: true,
-      },
+        isPrimary: true
+      }
     ],
     location: {
-      coordinates: { lat: 14.0945, lng: 74.4843 },
-      address: 'Main Road, Murudeshwar, Karnataka 581350',
+      coordinates: { lat: 14.0935, lng: 74.4845 },
+      address: 'Temple Road, Murudeshwar, Karnataka 581350',
       landmark: 'Near Murudeshwar Temple',
-      distanceFromTemple: 0.5,
+      distanceFromTemple: 0.2
     },
     contact: {
-      phone: '+91 8385 260555',
-      whatsapp: '+91 8385 260555',
-      email: 'info@rnsresidency.com',
-      website: 'https://rnsresidency.com',
+      phone: '+91 8385 260001',
+      whatsapp: '+91 9876543210',
+      email: 'info@rnsresidency.com'
     },
     rating: {
-      average: 4.5,
-      count: 342,
-      breakdown: { 5: 200, 4: 100, 3: 30, 2: 10, 1: 2 },
+      average: 4.4,
+      count: 567,
+      breakdown: { 5: 234, 4: 189, 3: 98, 2: 32, 1: 14 }
     },
     isInstantConfirm: true,
     isVerified: true,
-    tags: ['sea-view', 'family-friendly', 'restaurant'],
-    amenities: [
-      { id: 'wifi', name: 'Free WiFi', icon: 'wifi', category: 'basic' },
-      { id: 'ac', name: 'Air Conditioning', icon: 'ac', category: 'basic' },
-      { id: 'parking', name: 'Free Parking', icon: 'parking', category: 'basic' },
-    ],
+    tags: ['temple-view', 'comfortable', 'clean', 'central'],
+    amenities: hotelAmenities.slice(0, 6),
     rooms: [
       {
         id: 'room-1',
         name: 'Deluxe Room',
-        description: 'Spacious room with sea view',
+        description: 'Spacious room with modern amenities',
         capacity: 2,
-        bedType: 'King',
-        area: 300,
+        bedType: 'Queen Bed',
+        area: 280,
         images: [
           {
-            id: 'room-img-1',
+            id: 'room-img1',
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop',
-            alt: 'Deluxe Room',
-          },
+            url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Deluxe room'
+          }
         ],
-        amenities: [],
-        basePrice: 2500,
-        taxes: 300,
-        availability: true,
-      },
+        amenities: hotelAmenities.slice(0, 5),
+        basePrice: 4500,
+        taxes: 810,
+        availability: true
+      }
     ],
     checkInTime: '14:00',
-    checkOutTime: '11:00',
+    checkOutTime: '12:00',
     policies: {
-      cancellation: 'Free cancellation up to 24 hours before check-in',
-      children: 'Children of all ages are welcome',
-      pets: 'Pets are not allowed',
-      smoking: 'Non-smoking property',
+      cancellation: 'Free cancellation up to 12 hours before check-in',
+      children: 'Children under 10 stay free',
+      pets: 'Pets not allowed',
+      smoking: 'Non-smoking property'
     },
-    nearbyAttractions: ['Murudeshwar Temple', 'Murudeshwar Beach', 'Netrani Island'],
-    createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
+    nearbyAttractions: ['Murudeshwar Temple', 'Local Markets', 'Beach'],
+    createdAt: '2023-02-15T00:00:00Z',
+    updatedAt: '2025-01-12T00:00:00Z'
   },
   {
     id: 'hotel-2',
     type: 'hotel',
     name: 'Naveen Beach Resort',
     slug: 'naveen-beach-resort',
-    description: 'Experience luxury beachfront living with world-class amenities and stunning ocean views.',
-    shortDescription: 'Luxury beachfront resort',
+    description: 'Beautiful beachfront property with stunning sea views and luxury amenities.',
+    shortDescription: 'Beachfront resort with sea views',
     category: 'luxury',
     images: [
       {
-        id: 'img-2',
+        id: 'img2',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=600&fit=crop',
+        url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
         alt: 'Naveen Beach Resort',
-        isPrimary: true,
-      },
+        isPrimary: true
+      }
     ],
     location: {
-      coordinates: { lat: 14.0955, lng: 74.4853 },
+      coordinates: { lat: 14.0950, lng: 74.4850 },
       address: 'Beach Road, Murudeshwar, Karnataka 581350',
-      landmark: 'On Murudeshwar Beach',
-      distanceFromTemple: 1.2,
+      landmark: 'Murudeshwar Beach',
+      distanceFromTemple: 0.1
     },
     contact: {
-      phone: '+91 8385 261234',
-      whatsapp: '+91 8385 261234',
-      email: 'stay@naveenresort.com',
+      phone: '+91 8385 260002',
+      whatsapp: '+91 9876543211',
+      email: 'info@naveenbeach.com'
     },
     rating: {
-      average: 4.8,
-      count: 521,
-      breakdown: { 5: 400, 4: 100, 3: 15, 2: 5, 1: 1 },
+      average: 4.3,
+      count: 892,
+      breakdown: { 5: 445, 4: 267, 3: 134, 2: 31, 1: 15 }
     },
     isInstantConfirm: true,
     isVerified: true,
-    tags: ['beachfront', 'luxury', 'pool', 'spa'],
-    amenities: [
-      { id: 'pool', name: 'Swimming Pool', icon: 'pool', category: 'premium' },
-      { id: 'spa', name: 'Spa & Wellness', icon: 'spa', category: 'premium' },
-      { id: 'gym', name: 'Fitness Center', icon: 'gym', category: 'premium' },
-    ],
+    tags: ['beachfront', 'luxury', 'sea-view', 'restaurant'],
+    amenities: hotelAmenities.slice(0, 7),
     rooms: [
       {
         id: 'room-2',
-        name: 'Ocean View Suite',
-        description: 'Luxurious suite with private balcony',
+        name: 'Sea View Suite',
+        description: 'Luxury suite with panoramic sea views',
         capacity: 3,
-        bedType: 'King + Single',
-        area: 450,
+        bedType: 'King Bed + Sofa',
+        area: 420,
         images: [
           {
-            id: 'room-img-2',
+            id: 'room-img2',
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop',
-            alt: 'Ocean View Suite',
-          },
+            url: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Sea view suite'
+          }
         ],
-        amenities: [],
-        basePrice: 5500,
-        taxes: 660,
-        availability: true,
-      },
+        amenities: hotelAmenities.slice(0, 6),
+        basePrice: 7800,
+        taxes: 1404,
+        availability: true
+      }
     ],
     checkInTime: '15:00',
-    checkOutTime: '12:00',
+    checkOutTime: '11:00',
     policies: {
-      cancellation: 'Free cancellation up to 48 hours before check-in',
+      cancellation: 'Free cancellation up to 24 hours before check-in',
       children: 'Children under 12 stay free',
-      pets: 'Pets allowed with prior notice',
-      smoking: 'Designated smoking areas available',
+      pets: 'Pets not allowed',
+      smoking: 'Non-smoking property'
     },
-    nearbyAttractions: ['Murudeshwar Temple', 'Beach Activities', 'Water Sports'],
-    createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
+    nearbyAttractions: ['Murudeshwar Temple', 'Murudeshwar Beach', 'Netrani Island'],
+    createdAt: '2023-03-01T00:00:00Z',
+    updatedAt: '2025-01-18T00:00:00Z'
   },
   {
     id: 'hotel-3',
     type: 'hotel',
-    name: 'Shiva Prasad Lodge',
-    slug: 'shiva-prasad-lodge',
-    description: 'Budget-friendly accommodation perfect for pilgrims and budget travelers.',
-    shortDescription: 'Clean and affordable stay',
-    category: 'budget',
+    name: 'Sea View Resort',
+    slug: 'sea-view-resort',
+    description: 'A premium beachside resort offering luxury accommodations and world-class service.',
+    shortDescription: 'Premium beachside resort',
+    category: 'luxury',
     images: [
       {
-        id: 'img-3',
+        id: 'img3',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop',
-        alt: 'Shiva Prasad Lodge',
-        isPrimary: true,
-      },
+        url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Sea View Resort',
+        isPrimary: true
+      }
     ],
     location: {
-      coordinates: { lat: 14.0935, lng: 74.4833 },
-      address: 'Temple Street, Murudeshwar, Karnataka 581350',
-      landmark: 'Walking distance from temple',
-      distanceFromTemple: 0.3,
+      coordinates: { lat: 14.0960, lng: 74.4855 },
+      address: 'Coastal Road, Murudeshwar, Karnataka 581350',
+      landmark: 'Near Murudeshwar Beach',
+      distanceFromTemple: 0.3
     },
     contact: {
-      phone: '+91 8385 260123',
-      whatsapp: '+91 8385 260123',
+      phone: '+91 8385 260003',
+      whatsapp: '+91 9876543212',
+      email: 'info@seaviewresort.com'
     },
     rating: {
-      average: 3.8,
-      count: 156,
-      breakdown: { 5: 50, 4: 60, 3: 35, 2: 8, 1: 3 },
+      average: 4.5,
+      count: 1156,
+      breakdown: { 5: 694, 4: 289, 3: 127, 2: 33, 1: 13 }
     },
-    isInstantConfirm: false,
+    isInstantConfirm: true,
     isVerified: true,
-    tags: ['budget', 'temple-nearby', 'basic'],
-    amenities: [
-      { id: 'wifi', name: 'Free WiFi', icon: 'wifi', category: 'basic' },
-      { id: 'fan', name: 'Ceiling Fan', icon: 'fan', category: 'basic' },
-    ],
+    tags: ['luxury', 'beachfront', 'spa', 'restaurant', 'pool'],
+    amenities: hotelAmenities,
     rooms: [
       {
         id: 'room-3',
-        name: 'Standard Room',
-        description: 'Clean and comfortable basic room',
+        name: 'Premium Ocean View',
+        description: 'Spacious room with direct ocean views',
         capacity: 2,
-        bedType: 'Double',
-        area: 200,
+        bedType: 'King Bed',
+        area: 380,
         images: [
           {
-            id: 'room-img-3',
+            id: 'room-img3',
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=600&fit=crop',
-            alt: 'Standard Room',
-          },
+            url: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Premium ocean view room'
+          }
         ],
-        amenities: [],
-        basePrice: 1200,
-        taxes: 144,
-        availability: true,
-      },
+        amenities: hotelAmenities.slice(0, 7),
+        basePrice: 9500,
+        taxes: 1710,
+        availability: true
+      }
     ],
-    checkInTime: '12:00',
-    checkOutTime: '10:00',
+    checkInTime: '14:00',
+    checkOutTime: '12:00',
     policies: {
-      cancellation: 'Cancellation charges apply',
-      children: 'Children welcome',
-      pets: 'No pets allowed',
-      smoking: 'No smoking',
+      cancellation: 'Free cancellation up to 48 hours before check-in',
+      children: 'Children under 15 stay free',
+      pets: 'Pets not allowed',
+      smoking: 'Non-smoking property'
     },
-    nearbyAttractions: ['Murudeshwar Temple', 'Local Market'],
-    createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
+    nearbyAttractions: ['Murudeshwar Temple', 'Murudeshwar Beach', 'Netrani Island'],
+    createdAt: '2023-03-15T00:00:00Z',
+    updatedAt: '2025-01-20T00:00:00Z'
   },
   {
     id: 'hotel-4',
     type: 'hotel',
-    name: 'Kamat Holiday Homes',
-    slug: 'kamat-holiday-homes',
-    description: 'Comfortable mid-range accommodation with excellent hospitality and coastal Karnataka cuisine.',
-    shortDescription: 'Great value for families',
-    category: 'mid-range',
+    name: 'Central Lodge',
+    slug: 'central-lodge',
+    description: 'Budget-friendly accommodation in the heart of Murudeshwar with basic amenities.',
+    shortDescription: 'Budget lodge in central location',
+    category: 'budget',
     images: [
       {
-        id: 'img-4',
+        id: 'img4',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop',
-        alt: 'Kamat Holiday Homes',
-        isPrimary: true,
-      },
+        url: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Central Lodge',
+        isPrimary: true
+      }
     ],
     location: {
-      coordinates: { lat: 14.0940, lng: 74.4838 },
-      address: 'Station Road, Murudeshwar, Karnataka 581350',
-      landmark: 'Near Railway Station',
-      distanceFromTemple: 0.8,
+      coordinates: { lat: 14.0930, lng: 74.4840 },
+      address: 'Main Street, Murudeshwar, Karnataka 581350',
+      landmark: 'Near Murudeshwar Temple',
+      distanceFromTemple: 0.4
     },
     contact: {
-      phone: '+91 8385 260777',
-      whatsapp: '+91 8385 260777',
-      email: 'bookings@kamatholidays.com',
+      phone: '+91 8385 260004',
+      whatsapp: '+91 9876543213',
+      email: 'info@centrallodge.com'
     },
     rating: {
-      average: 4.3,
-      count: 287,
-      breakdown: { 5: 150, 4: 100, 3: 30, 2: 5, 1: 2 },
+      average: 3.8,
+      count: 324,
+      breakdown: { 5: 98, 4: 145, 3: 67, 2: 12, 1: 2 }
     },
     isInstantConfirm: true,
     isVerified: true,
-    tags: ['family-friendly', 'restaurant', 'value-for-money'],
-    amenities: [
-      { id: 'restaurant', name: 'Restaurant', icon: 'restaurant', category: 'basic' },
-      { id: 'ac', name: 'Air Conditioning', icon: 'ac', category: 'basic' },
-    ],
+    tags: ['budget', 'central', 'clean', 'basic'],
+    amenities: hotelAmenities.slice(0, 4),
     rooms: [
       {
         id: 'room-4',
-        name: 'Family Room',
-        description: 'Spacious room ideal for families',
+        name: 'Standard Room',
+        description: 'Basic room with essential amenities',
+        capacity: 2,
+        bedType: 'Double Bed',
+        area: 200,
+        images: [
+          {
+            id: 'room-img4',
+            type: 'image',
+            url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Standard room'
+          }
+        ],
+        amenities: hotelAmenities.slice(0, 3),
+        basePrice: 2500,
+        taxes: 450,
+        availability: true
+      }
+    ],
+    checkInTime: '12:00',
+    checkOutTime: '11:00',
+    policies: {
+      cancellation: 'Free cancellation up to 6 hours before check-in',
+      children: 'Children under 8 stay free',
+      pets: 'Pets not allowed',
+      smoking: 'Smoking allowed in designated areas'
+    },
+    nearbyAttractions: ['Murudeshwar Temple', 'Local Markets'],
+    createdAt: '2023-04-01T00:00:00Z',
+    updatedAt: '2025-01-22T00:00:00Z'
+  },
+  {
+    id: 'hotel-5',
+    type: 'hotel',
+    name: 'Temple View Inn',
+    slug: 'temple-view-inn',
+    description: 'A comfortable mid-range hotel with excellent temple views and modern amenities.',
+    shortDescription: 'Comfortable hotel with temple views',
+    category: 'mid-range',
+    images: [
+      {
+        id: 'img5',
+        type: 'image',
+        url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Temple View Inn',
+        isPrimary: true
+      }
+    ],
+    location: {
+      coordinates: { lat: 14.0925, lng: 74.4835 },
+      address: 'Temple Road, Murudeshwar, Karnataka 581350',
+      landmark: 'Opposite Murudeshwar Temple',
+      distanceFromTemple: 0.2
+    },
+    contact: {
+      phone: '+91 8385 260005',
+      whatsapp: '+91 9876543214',
+      email: 'info@templeviewinn.com'
+    },
+    rating: {
+      average: 4.2,
+      count: 847,
+      breakdown: { 5: 423, 4: 254, 3: 127, 2: 32, 1: 11 }
+    },
+    isInstantConfirm: true,
+    isVerified: true,
+    tags: ['temple-view', 'budget-friendly', 'clean', 'central'],
+    amenities: hotelAmenities.slice(0, 6),
+    rooms: [
+      {
+        id: 'room-5',
+        name: 'Standard Room',
+        description: 'Clean and comfortable standard room',
+        capacity: 2,
+        bedType: 'Double Bed',
+        area: 250,
+        images: [
+          {
+            id: 'room-img5',
+            type: 'image',
+            url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Standard room'
+          }
+        ],
+        amenities: hotelAmenities.slice(0, 4),
+        basePrice: 3500,
+        taxes: 630,
+        availability: true
+      }
+    ],
+    checkInTime: '12:00',
+    checkOutTime: '11:00',
+    policies: {
+      cancellation: 'Free cancellation up to 6 hours before check-in',
+      children: 'Children under 8 stay free',
+      pets: 'Small pets allowed with prior notice',
+      smoking: 'Smoking allowed in designated areas'
+    },
+    nearbyAttractions: ['Murudeshwar Temple', 'Local Markets', 'Beach'],
+    createdAt: '2023-02-01T00:00:00Z',
+    updatedAt: '2025-01-10T00:00:00Z'
+  },
+  {
+    id: 'hotel-6',
+    type: 'hotel',
+    name: 'Coastal Paradise Resort',
+    slug: 'coastal-paradise-resort',
+    description: 'An eco-friendly beach resort with sustainable practices and serene ambiance.',
+    shortDescription: 'Eco-friendly beach resort',
+    category: 'resort',
+    images: [
+      {
+        id: 'img6',
+        type: 'image',
+        url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Coastal Paradise Resort',
+        isPrimary: true
+      }
+    ],
+    location: {
+      coordinates: { lat: 14.1015, lng: 74.4892 },
+      address: 'Coastal Highway, Murudeshwar, Karnataka 581350',
+      landmark: 'Near Murudeshwar Beach',
+      distanceFromTemple: 1.2
+    },
+    contact: {
+      phone: '+91 8385 260006',
+      whatsapp: '+91 9876543215',
+      email: 'info@coastalparadise.com'
+    },
+    rating: {
+      average: 4.4,
+      count: 723,
+      breakdown: { 5: 367, 4: 217, 3: 98, 2: 28, 1: 13 }
+    },
+    isInstantConfirm: false,
+    isVerified: true,
+    tags: ['eco-friendly', 'beach', 'resort', 'peaceful'],
+    amenities: hotelAmenities.slice(0, 8),
+    rooms: [
+      {
+        id: 'room-6',
+        name: 'Garden Villa',
+        description: 'Eco-friendly villa surrounded by gardens',
         capacity: 4,
-        bedType: 'Two Doubles',
+        bedType: 'King + Twin Beds',
+        area: 450,
+        images: [
+          {
+            id: 'room-img6',
+            type: 'image',
+            url: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Garden villa'
+          }
+        ],
+        amenities: hotelAmenities.slice(0, 6),
+        basePrice: 6500,
+        taxes: 1170,
+        availability: true
+      }
+    ],
+    checkInTime: '15:00',
+    checkOutTime: '11:00',
+    policies: {
+      cancellation: 'Free cancellation up to 24 hours before check-in',
+      children: 'Children under 12 stay free',
+      pets: 'Pets welcome with eco-friendly policies',
+      smoking: 'Non-smoking property'
+    },
+    nearbyAttractions: ['Murudeshwar Beach', 'Nature Trails', 'Bird Watching'],
+    createdAt: '2023-04-15T00:00:00Z',
+    updatedAt: '2025-01-25T00:00:00Z'
+  },
+  {
+    id: 'hotel-7',
+    type: 'hotel',
+    name: 'Murudeshwar Beach Resort',
+    slug: 'murudeshwar-beach-resort',
+    description: 'A luxury beachfront resort offering stunning views of the Arabian Sea and Murudeshwar Temple.',
+    shortDescription: 'Luxury beachfront resort with temple views',
+    category: 'luxury',
+    images: [
+      {
+        id: 'img7',
+        type: 'image',
+        url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Murudeshwar Beach Resort exterior',
+        isPrimary: true
+      }
+    ],
+    location: {
+      coordinates: { lat: 14.0942, lng: 74.4843 },
+      address: 'Beach Road, Murudeshwar, Karnataka 581350',
+      landmark: 'Near Murudeshwar Temple',
+      distanceFromTemple: 0.5
+    },
+    contact: {
+      phone: '+91 8385 260007',
+      whatsapp: '+91 9876543216',
+      email: 'info@murudeshwarbeachresort.com',
+      website: 'https://murudeshwarbeachresort.com'
+    },
+    rating: {
+      average: 4.6,
+      count: 1247,
+      breakdown: { 5: 756, 4: 312, 3: 124, 2: 35, 1: 20 }
+    },
+    isInstantConfirm: true,
+    isVerified: true,
+    tags: ['beachfront', 'luxury', 'temple-view', 'spa', 'restaurant'],
+    amenities: hotelAmenities.slice(0, 8),
+    rooms: [
+      {
+        id: 'room-7',
+        name: 'Sea View Deluxe',
+        description: 'Spacious room with panoramic sea views',
+        capacity: 2,
+        bedType: 'King Bed',
         area: 350,
         images: [
           {
-            id: 'room-img-4',
+            id: 'room-img7',
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&h=600&fit=crop',
-            alt: 'Family Room',
-          },
+            url: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Sea view deluxe room'
+          }
         ],
-        amenities: [],
-        basePrice: 3200,
-        taxes: 384,
-        availability: true,
-      },
+        amenities: hotelAmenities.slice(0, 5),
+        basePrice: 8500,
+        taxes: 1530,
+        availability: true
+      }
+    ],
+    checkInTime: '14:00',
+    checkOutTime: '12:00',
+    policies: {
+      cancellation: 'Free cancellation up to 24 hours before check-in',
+      children: 'Children under 12 stay free with existing bedding',
+      pets: 'Pets are not allowed',
+      smoking: 'Non-smoking property'
+    },
+    nearbyAttractions: ['Murudeshwar Temple', 'Murudeshwar Beach', 'Netrani Island'],
+    createdAt: '2023-01-15T00:00:00Z',
+    updatedAt: '2025-01-15T00:00:00Z'
+  },
+  {
+    id: 'hotel-8',
+    type: 'hotel',
+    name: 'Heritage Stay',
+    slug: 'heritage-stay',
+    description: 'Traditional heritage property showcasing local architecture and culture.',
+    shortDescription: 'Heritage property with traditional charm',
+    category: 'mid-range',
+    images: [
+      {
+        id: 'img8',
+        type: 'image',
+        url: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Heritage Stay',
+        isPrimary: true
+      }
+    ],
+    location: {
+      coordinates: { lat: 14.0920, lng: 74.4830 },
+      address: 'Heritage Street, Murudeshwar, Karnataka 581350',
+      landmark: 'Near Murudeshwar Temple',
+      distanceFromTemple: 0.6
+    },
+    contact: {
+      phone: '+91 8385 260008',
+      whatsapp: '+91 9876543217',
+      email: 'info@heritagestay.com'
+    },
+    rating: {
+      average: 4.0,
+      count: 456,
+      breakdown: { 5: 182, 4: 183, 3: 68, 2: 18, 1: 5 }
+    },
+    isInstantConfirm: false,
+    isVerified: true,
+    tags: ['heritage', 'traditional', 'cultural', 'authentic'],
+    amenities: hotelAmenities.slice(0, 5),
+    rooms: [
+      {
+        id: 'room-8',
+        name: 'Heritage Room',
+        description: 'Traditional room with local artwork and furniture',
+        capacity: 2,
+        bedType: 'Queen Bed',
+        area: 300,
+        images: [
+          {
+            id: 'room-img8',
+            type: 'image',
+            url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Heritage room'
+          }
+        ],
+        amenities: hotelAmenities.slice(0, 4),
+        basePrice: 5500,
+        taxes: 990,
+        availability: true
+      }
     ],
     checkInTime: '13:00',
     checkOutTime: '11:00',
     policies: {
-      cancellation: 'Free cancellation up to 24 hours',
-      children: 'Children under 8 stay free',
-      pets: 'No pets',
-      smoking: 'Non-smoking rooms',
+      cancellation: 'Free cancellation up to 12 hours before check-in',
+      children: 'Children under 10 stay free',
+      pets: 'Pets not allowed',
+      smoking: 'Smoking allowed in designated areas'
     },
-    nearbyAttractions: ['Murudeshwar Temple', 'Beach', 'Local Shopping'],
-    createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
-  },
+    nearbyAttractions: ['Murudeshwar Temple', 'Local Art Gallery', 'Cultural Center'],
+    createdAt: '2023-05-01T00:00:00Z',
+    updatedAt: '2025-01-28T00:00:00Z'
+  }
+];
 
-  // Restaurants
+// Restaurants data
+const restaurants: Restaurant[] = [
   {
     id: 'restaurant-1',
     type: 'restaurant',
     name: 'Naveen Beach Restaurant',
     slug: 'naveen-beach-restaurant',
-    description: 'Authentic coastal Karnataka cuisine with fresh seafood and stunning beach views.',
-    shortDescription: 'Fresh seafood with beach views',
+    description: 'Authentic coastal cuisine with fresh seafood and traditional Karnataka dishes. Located right on the beach with stunning ocean views.',
+    shortDescription: 'Fresh seafood with ocean views',
     images: [
       {
-        id: 'rest-img-1',
+        id: 'rest-img1',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
-        alt: 'Naveen Beach Restaurant',
-        isPrimary: true,
-      },
+        url: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Naveen Beach Restaurant'
+      }
     ],
     location: {
-      coordinates: { lat: 14.0950, lng: 74.4848 },
+      coordinates: { lat: 14.0955, lng: 74.4851 },
       address: 'Beach Road, Murudeshwar, Karnataka 581350',
-      landmark: 'On the beach',
-      distanceFromTemple: 1.0,
+      landmark: 'Near Murudeshwar Beach',
+      distanceFromTemple: 0.8
     },
     contact: {
-      phone: '+91 8385 262000',
-      whatsapp: '+91 8385 262000',
+      phone: '+91 8385 260101',
+      whatsapp: '+91 9876543301',
+      email: 'info@naveenbeach.com'
     },
     rating: {
-      average: 4.6,
-      count: 428,
-      breakdown: { 5: 300, 4: 100, 3: 20, 2: 5, 1: 3 },
+      average: 4.3,
+      count: 1156,
+      breakdown: { 5: 578, 4: 347, 3: 173, 2: 42, 1: 16 }
     },
     isInstantConfirm: false,
     isVerified: true,
-    tags: ['seafood', 'beach-view', 'coastal-cuisine'],
-    cuisine: ['Coastal Karnataka', 'Seafood', 'South Indian'],
+    tags: ['seafood', 'south-indian', 'beachside', 'family'],
+    cuisine: ['South Indian', 'Seafood', 'North Indian'],
     mealTypes: ['lunch', 'dinner'],
     priceRange: 'mid-range',
     openingHours: {
-      monday: { open: '12:00', close: '22:00', isOpen: true },
-      tuesday: { open: '12:00', close: '22:00', isOpen: true },
-      wednesday: { open: '12:00', close: '22:00', isOpen: true },
-      thursday: { open: '12:00', close: '22:00', isOpen: true },
-      friday: { open: '12:00', close: '22:00', isOpen: true },
-      saturday: { open: '12:00', close: '22:00', isOpen: true },
-      sunday: { open: '12:00', close: '22:00', isOpen: true },
+      monday: { open: '11:00', close: '22:00', isOpen: true },
+      tuesday: { open: '11:00', close: '22:00', isOpen: true },
+      wednesday: { open: '11:00', close: '22:00', isOpen: true },
+      thursday: { open: '11:00', close: '22:00', isOpen: true },
+      friday: { open: '11:00', close: '22:00', isOpen: true },
+      saturday: { open: '11:00', close: '22:00', isOpen: true },
+      sunday: { open: '11:00', close: '22:00', isOpen: true }
     },
-    features: ['Beach Seating', 'Live Music', 'Bar', 'Outdoor Dining'],
+    features: ['Ocean View', 'Fresh Seafood', 'Family Friendly', 'Outdoor Seating'],
     menu: [
       {
         id: 'menu-1',
-        name: 'Fish Thali',
-        description: 'Traditional coastal fish thali with rice and sides',
-        price: 350,
+        name: 'Murudeshwar Fish Curry',
+        description: 'Traditional coastal fish curry with coconut and spices',
+        price: 320,
         category: 'Main Course',
         isVegetarian: false,
         isVegan: false,
-        spiceLevel: 'medium',
-      },
+        spiceLevel: 'medium'
+      }
     ],
-    averageCostForTwo: 1200,
-    createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
+    averageCostForTwo: 800,
+    createdAt: '2023-01-10T00:00:00Z',
+    updatedAt: '2025-01-12T00:00:00Z'
   },
   {
     id: 'restaurant-2',
     type: 'restaurant',
-    name: 'Kamat Upachar',
-    slug: 'kamat-upachar',
-    description: 'Pure vegetarian restaurant serving authentic South Indian and North Karnataka dishes.',
-    shortDescription: 'Pure veg South Indian meals',
+    name: 'Temple View Vegetarian',
+    slug: 'temple-view-vegetarian',
+    description: 'Pure vegetarian restaurant serving traditional Karnataka cuisine with temple views.',
+    shortDescription: 'Pure vegetarian with temple views',
     images: [
       {
-        id: 'rest-img-2',
+        id: 'rest-img2',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop',
-        alt: 'Kamat Upachar',
-        isPrimary: true,
-      },
+        url: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Temple View Vegetarian Restaurant'
+      }
     ],
     location: {
-      coordinates: { lat: 14.0942, lng: 74.4840 },
-      address: 'Main Road, Murudeshwar, Karnataka 581350',
-      landmark: 'Near Temple',
-      distanceFromTemple: 0.4,
+      coordinates: { lat: 14.0928, lng: 74.4838 },
+      address: 'Temple Street, Murudeshwar, Karnataka 581350',
+      landmark: 'Near Murudeshwar Temple',
+      distanceFromTemple: 0.3
     },
     contact: {
-      phone: '+91 8385 260888',
-      whatsapp: '+91 8385 260888',
+      phone: '+91 8385 260102',
+      whatsapp: '+91 9876543302'
     },
     rating: {
-      average: 4.4,
-      count: 315,
-      breakdown: { 5: 200, 4: 90, 3: 20, 2: 3, 1: 2 },
+      average: 4.1,
+      count: 892,
+      breakdown: { 5: 401, 4: 312, 3: 134, 2: 35, 1: 10 }
     },
     isInstantConfirm: false,
     isVerified: true,
-    tags: ['vegetarian', 'south-indian', 'budget-friendly'],
-    cuisine: ['South Indian', 'North Karnataka', 'Udupi'],
+    tags: ['vegetarian', 'traditional', 'temple-view', 'authentic'],
+    cuisine: ['South Indian', 'North Indian', 'Udupi'],
     mealTypes: ['breakfast', 'lunch', 'dinner'],
     priceRange: 'budget',
     openingHours: {
-      monday: { open: '07:00', close: '22:00', isOpen: true },
-      tuesday: { open: '07:00', close: '22:00', isOpen: true },
-      wednesday: { open: '07:00', close: '22:00', isOpen: true },
-      thursday: { open: '07:00', close: '22:00', isOpen: true },
-      friday: { open: '07:00', close: '22:00', isOpen: true },
-      saturday: { open: '07:00', close: '22:00', isOpen: true },
-      sunday: { open: '07:00', close: '22:00', isOpen: true },
+      monday: { open: '06:00', close: '21:00', isOpen: true },
+      tuesday: { open: '06:00', close: '21:00', isOpen: true },
+      wednesday: { open: '06:00', close: '21:00', isOpen: true },
+      thursday: { open: '06:00', close: '21:00', isOpen: true },
+      friday: { open: '06:00', close: '21:00', isOpen: true },
+      saturday: { open: '06:00', close: '21:00', isOpen: true },
+      sunday: { open: '06:00', close: '21:00', isOpen: true }
     },
-    features: ['AC Dining', 'Family Seating', 'Quick Service'],
+    features: ['Pure Vegetarian', 'Temple View', 'Traditional Recipes', 'Clean & Hygienic'],
     menu: [
       {
         id: 'menu-2',
-        name: 'Masala Dosa',
-        description: 'Crispy dosa with potato filling',
-        price: 80,
-        category: 'Breakfast',
+        name: 'Udupi Thali',
+        description: 'Traditional South Indian thali with variety of dishes',
+        price: 180,
+        category: 'Thali',
         isVegetarian: true,
         isVegan: false,
-        spiceLevel: 'mild',
-      },
+        spiceLevel: 'mild'
+      }
     ],
-    averageCostForTwo: 400,
-    createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
-  },
+    averageCostForTwo: 350,
+    createdAt: '2023-01-15T00:00:00Z',
+    updatedAt: '2025-01-08T00:00:00Z'
+  }
+];
 
-  // Scuba Diving Operators
+// Scuba Operators data
+const scubaOperators: ScubaOperator[] = [
   {
     id: 'scuba-1',
     type: 'scuba',
-    name: 'Netrani Adventures',
-    slug: 'netrani-adventures',
-    description: 'Professional scuba diving operator offering unforgettable underwater experiences at Netrani Island.',
-    shortDescription: 'Expert scuba diving at Netrani',
+    name: 'Netrani Island Diving',
+    slug: 'netrani-island-diving',
+    description: 'Premier scuba diving operator offering unforgettable underwater experiences at Netrani Island.',
+    shortDescription: 'PADI certified diving at Netrani Island',
     images: [
       {
-        id: 'scuba-img-1',
+        id: 'scuba-img1',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop',
-        alt: 'Scuba Diving',
-        isPrimary: true,
-      },
+        url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Scuba diving at Netrani Island'
+      }
     ],
     location: {
-      coordinates: { lat: 14.0948, lng: 74.4845 },
-      address: 'Beach Road, Murudeshwar, Karnataka 581350',
-      landmark: 'Near Beach',
-      distanceFromTemple: 1.5,
+      coordinates: { lat: 14.0935, lng: 74.4845 },
+      address: 'Boat Jetty, Murudeshwar, Karnataka 581350',
+      landmark: 'Near Murudeshwar Boat Jetty',
+      distanceFromTemple: 0.7
     },
     contact: {
-      phone: '+91 9845 123456',
-      whatsapp: '+91 9845 123456',
-      email: 'dive@netraniadventures.com',
-      website: 'https://netraniadventures.com',
+      phone: '+91 8385 260201',
+      whatsapp: '+91 9876543401',
+      email: 'info@netranidiving.com',
+      website: 'https://netranidiving.com'
     },
     rating: {
-      average: 4.9,
-      count: 234,
-      breakdown: { 5: 210, 4: 20, 3: 3, 2: 1, 1: 0 },
+      average: 4.7,
+      count: 423,
+      breakdown: { 5: 298, 4: 89, 3: 28, 2: 6, 1: 2 }
     },
-    isInstantConfirm: true,
+    isInstantConfirm: false,
     isVerified: true,
-    tags: ['scuba-diving', 'netrani-island', 'padi-certified'],
+    tags: ['padi-certified', 'experienced', 'safe', 'netrani-island'],
     certifications: ['PADI', 'SSI', 'NAUI'],
-    languages: ['English', 'Hindi', 'Kannada', 'Tamil'],
-    experience: 15,
+    languages: ['English', 'Hindi', 'Kannada'],
+    experience: 12,
     packages: [
       {
         id: 'scuba-pkg-1',
-        name: 'Beginner Discovery Dive',
-        description: 'Perfect for first-time divers. No experience needed.',
-        duration: 2,
-        depth: 6,
+        name: 'Discover Scuba Diving',
+        description: 'Perfect for beginners - no experience required',
+        duration: 4,
+        depth: 12,
         difficulty: 'beginner',
-        includes: ['Equipment', 'Training', 'Lunch', 'Transport'],
-        excludes: ['Personal expenses', 'Insurance'],
-        price: 4500,
-        groupSize: { min: 1, max: 4 },
+        includes: ['Equipment', 'Boat Transfer', 'Instructor', 'Lunch', 'Photos'],
+        excludes: ['Transport to Murudeshwar', 'Personal Expenses'],
+        price: 3500,
+        groupSize: { min: 2, max: 8 },
         images: [
           {
-            id: 'scuba-pkg-img-1',
+            id: 'pkg-img1',
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop',
-            alt: 'Discovery Dive',
-          },
-        ],
-      },
+            url: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Beginner scuba diving'
+          }
+        ]
+      }
     ],
-    equipment: ['Wetsuits', 'BCDs', 'Regulators', 'Masks', 'Fins', 'Tanks'],
-    safetyRecord: '15 years accident-free',
-    diveSites: ['Netrani Island', 'Coral Reef', 'Rocky Bottom'],
-    createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
-  },
+    equipment: ['BCDs', 'Regulators', 'Wetsuits', 'Masks', 'Fins', 'Tanks'],
+    safetyRecord: 'Zero incidents in 5+ years of operation',
+    diveSites: ['Netrani Island', 'Coral Gardens', 'Fish Bowl', 'Trigger Fish Point'],
+    createdAt: '2023-02-01T00:00:00Z',
+    updatedAt: '2025-01-15T00:00:00Z'
+  }
+];
 
-  // Boating Operators
+// Boating Operators data
+const boatingOperators: BoatingOperator[] = [
   {
-    id: 'boating-1',
+    id: 'boat-1',
     type: 'boating',
-    name: 'Murudeshwar Water Sports',
-    slug: 'murudeshwar-water-sports',
-    description: 'Exciting boat trips and water sports activities along the beautiful Murudeshwar coast.',
-    shortDescription: 'Boat rides and water sports',
+    name: 'Murudeshwar Marine Adventures',
+    slug: 'murudeshwar-marine-adventures',
+    description: 'Experience the beautiful coastline with our boat trips to Netrani Island and sunset cruises.',
+    shortDescription: 'Boat trips to Netrani Island and sunset cruises',
     images: [
       {
-        id: 'boat-img-1',
+        id: 'boat-img1',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop',
-        alt: 'Boating',
-        isPrimary: true,
-      },
+        url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        alt: 'Boat trip to Netrani Island'
+      }
     ],
     location: {
-      coordinates: { lat: 14.0952, lng: 74.4850 },
-      address: 'Beach Point, Murudeshwar, Karnataka 581350',
-      landmark: 'Main Beach',
-      distanceFromTemple: 1.3,
+      coordinates: { lat: 14.0940, lng: 74.4848 },
+      address: 'Main Jetty, Murudeshwar, Karnataka 581350',
+      landmark: 'Murudeshwar Main Jetty',
+      distanceFromTemple: 0.6
     },
     contact: {
-      phone: '+91 9876 543210',
-      whatsapp: '+91 9876 543210',
+      phone: '+91 8385 260301',
+      whatsapp: '+91 9876543501',
+      email: 'info@murudeshwarmarine.com'
     },
     rating: {
-      average: 4.5,
-      count: 189,
-      breakdown: { 5: 120, 4: 55, 3: 10, 2: 3, 1: 1 },
+      average: 4.4,
+      count: 756,
+      breakdown: { 5: 412, 4: 234, 3: 87, 2: 18, 1: 5 }
     },
     isInstantConfirm: true,
     isVerified: true,
-    tags: ['boating', 'water-sports', 'family-activity'],
-    boatTypes: ['Speed Boat', 'Jet Ski', 'Banana Boat', 'Kayak'],
-    capacity: { min: 1, max: 8 },
+    tags: ['family-friendly', 'experienced-crew', 'safe', 'scenic'],
+    boatTypes: ['Speed Boat', 'Traditional Boat', 'Catamaran'],
+    capacity: { min: 4, max: 20 },
     trips: [
       {
-        id: 'boat-trip-1',
-        name: 'Coastal Cruise',
-        description: 'Scenic boat ride along the coast',
-        duration: 1,
-        capacity: 8,
-        includes: ['Life Jackets', 'Guide', 'Refreshments'],
-        route: ['Beach', 'Temple View', 'Rock Formation', 'Beach'],
-        price: 500,
-        timeSlots: ['09:00', '11:00', '14:00', '16:00'],
+        id: 'trip-1',
+        name: 'Netrani Island Day Trip',
+        description: 'Full day trip to pristine Netrani Island with snorkeling',
+        duration: 8,
+        capacity: 15,
+        includes: ['Boat Transfer', 'Snorkeling Equipment', 'Lunch', 'Guide'],
+        route: ['Murudeshwar Jetty', 'Netrani Island', 'Return'],
+        price: 2500,
+        timeSlots: ['08:00'],
         images: [
           {
-            id: 'boat-trip-img-1',
+            id: 'trip-img1',
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1535024966840-0c4d0e0cfdbd?w=800&h=600&fit=crop',
-            alt: 'Coastal Cruise',
-          },
-        ],
-      },
+            url: 'https://images.unsplash.com/photo-1580479960030-0b67492b55a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            alt: 'Netrani Island trip'
+          }
+        ]
+      }
     ],
-    safetyEquipment: ['Life Jackets', 'First Aid Kit', 'Radio', 'Flares'],
-    licenses: ['Coastal Tourism License', 'Safety Certification'],
-    createdAt: '2024-01-01T00:00:00Z',
-    updatedAt: '2024-01-15T00:00:00Z',
-  },
+    safetyEquipment: ['Life Jackets', 'First Aid Kit', 'GPS', 'Radio Communication'],
+    licenses: ['Commercial Boat License', 'Tourist Operator License'],
+    createdAt: '2023-01-20T00:00:00Z',
+    updatedAt: '2025-01-10T00:00:00Z'
+  }
 ];
+
+// Combine all providers
+export const allProviders: Provider[] = [
+  ...hotels,
+  ...restaurants,
+  ...scubaOperators,
+  ...boatingOperators
+];
+
+// Export individual arrays
+export { hotels, restaurants, scubaOperators, boatingOperators };
+
+// Export filtered providers by type
+export const getProvidersByType = (type: string): Provider[] => {
+  return allProviders.filter(provider => provider.type === type);
+};
+
+export const getProviderById = (id: string): Provider | undefined => {
+  return allProviders.find(provider => provider.id === id);
+};
+
+export const getProviderBySlug = (slug: string): Provider | undefined => {
+  return allProviders.find(provider => provider.slug === slug);
+}; 
