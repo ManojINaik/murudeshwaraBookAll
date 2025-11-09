@@ -41,17 +41,25 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Trust Indicators - Full Width with Wide Spacing */}
+        {/* Trust Indicators - Responsive Grid */}
         <div className="mt-16">
           <p className="text-sm text-neutral-500 mb-8 text-center">Trusted by leading platforms</p>
-          <div className="w-full max-w-6xl mx-auto">
-            <div className="flex justify-between items-center px-8 md:px-16 lg:px-24 opacity-60">
-              <div className="text-2xl md:text-3xl font-bold text-neutral-400">OYO</div>
-              <div className="text-2xl md:text-3xl font-bold text-neutral-400">zomato</div>
-              <div className="text-2xl md:text-3xl font-bold text-neutral-400">WSF</div>
-              <div className="flex items-center gap-2 text-neutral-400">
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-neutral-400 rounded-full"></div>
-                <span className="font-semibold text-lg md:text-xl">Dreamz Diving</span>
+          <div className="w-full max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 px-4 opacity-60">
+              <div className="flex justify-center items-center">
+                <div className="text-2xl md:text-3xl font-bold text-neutral-400">OYO</div>
+              </div>
+              <div className="flex justify-center items-center">
+                <div className="text-2xl md:text-3xl font-bold text-neutral-400">zomato</div>
+              </div>
+              <div className="flex justify-center items-center">
+                <div className="text-2xl md:text-3xl font-bold text-neutral-400">WSF</div>
+              </div>
+              <div className="flex justify-center items-center col-span-2 sm:col-span-2 md:col-span-1">
+                <div className="flex items-center gap-2 text-neutral-400">
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-neutral-400 rounded-full flex-shrink-0"></div>
+                  <span className="font-semibold text-lg md:text-xl whitespace-nowrap">Dreamz Diving</span>
+                </div>
               </div>
             </div>
           </div>
