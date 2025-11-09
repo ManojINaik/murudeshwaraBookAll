@@ -1,10 +1,25 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Star } from 'lucide-react';
 import { allProviders } from '@/data/providers';
 import { Provider } from '@/types';
 import { formatPrice } from '@/lib/utils';
+
+// Helper function to generate WhatsApp booking link
+const generateWhatsAppLink = (provider: Provider): string => {
+  const phone = provider.contact.whatsapp || provider.contact.phone;
+  const cleanPhone = phone.replace(/[^0-9]/g, '');
+
+  // Generate Google Maps link from coordinates
+  const googleMapsLink = `https://www.google.com/maps/place/${provider.name}/@${provider.location.coordinates.lat},${provider.location.coordinates.lng}`;
+
+  const message = `Hi, I would like to book ${provider.name} in Murudeshwar. Here's the Google Maps link: ${googleMapsLink}`;
+  const encodedMessage = encodeURIComponent(message);
+
+  return `https://api.whatsapp.com/send/?phone=${cleanPhone}&text=${encodedMessage}&type=phone_number&app_absent=0`;
+};
 
 export function ProviderGrid() {
   const [activeCategory, setActiveCategory] = useState('hotel');
@@ -130,9 +145,14 @@ export function ProviderGrid() {
                   </div>
 
                   {/* Book Now Button */}
-                  <button className="w-full bg-neutral-900 text-white py-3 rounded-xl font-semibold hover:bg-neutral-800 transition-colors">
+                  <a
+                    href={generateWhatsAppLink(provider)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-neutral-900 text-white py-3 rounded-xl font-semibold hover:bg-neutral-800 transition-colors text-center"
+                  >
                     Book now
-                  </button>
+                  </a>
                 </div>
               </div>
             );
@@ -141,11 +161,13 @@ export function ProviderGrid() {
 
         {/* View All Button */}
         <div className="text-center mt-16">
-          <button className="bg-primary-50 shadow-neumorphic hover:shadow-neumorphic-inset px-12 py-4 rounded-3xl font-bold text-xl text-neutral-700 transition-all duration-300 transform hover:scale-105">
-            <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-              View All Properties
-            </span>
-          </button>
+          <Link href="/properties">
+            <button className="bg-primary-50 shadow-neumorphic hover:shadow-neumorphic-inset px-12 py-4 rounded-3xl font-bold text-xl text-neutral-700 transition-all duration-300 transform hover:scale-105">
+              <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                View All Properties
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

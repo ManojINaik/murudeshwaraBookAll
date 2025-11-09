@@ -14,44 +14,45 @@ const hotelAmenities: Amenity[] = [
   { id: 'accessible', name: 'Wheelchair Accessible', icon: 'accessibility', category: 'accessibility' },
 ];
 
-// Hotels data
+// Hotels data - Real data from CSV
 const hotels: Hotel[] = [
   {
-    id: 'hotel-1',
+    id: 'ChIJtdOI5ttGvDsRvc9gcrVbLtA',
     type: 'hotel',
     name: 'RNS Residency',
     slug: 'rns-residency',
-    description: 'A comfortable mid-range hotel with excellent amenities and proximity to the temple.',
-    shortDescription: 'Comfortable hotel near temple',
+    description: 'Temple side property with beautiful views of the Arabian Sea',
+    shortDescription: 'Temple side property with sea views',
     category: 'mid-range',
     images: [
       {
         id: 'img1',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-        alt: 'RNS Residency exterior',
+        url: 'https://lh3.ggpht.com/p/AF1QipMhFIfVI7tv2p3LdI3t7aXCe6e3ctGiUFZBfPKb=s1024',
+        alt: 'RNS Residency',
         isPrimary: true
       }
     ],
     location: {
-      coordinates: { lat: 14.0935, lng: 74.4845 },
-      address: 'Temple Road, Murudeshwar, Karnataka 581350',
+      coordinates: { lat: 14.0950465, lng: 74.4830117 },
+      address: 'Murudeshwar Temple Hwy, Murdeshwar, Karnataka 581350',
       landmark: 'Near Murudeshwar Temple',
       distanceFromTemple: 0.2
     },
     contact: {
-      phone: '+91 8385 260001',
-      whatsapp: '+91 9876543210',
-      email: 'info@rnsresidency.com'
+      phone: '917829008264',
+      whatsapp: '917829008264',
+      email: 'info@rnsresidency.com',
+      website: 'https://www.naveenhotels.com/RNS-Residency/'
     },
     rating: {
-      average: 4.4,
-      count: 567,
-      breakdown: { 5: 234, 4: 189, 3: 98, 2: 32, 1: 14 }
+      average: 4.2,
+      count: 4398,
+      breakdown: { 5: 2199, 4: 1319, 3: 660, 2: 176, 1: 44 }
     },
     isInstantConfirm: true,
     isVerified: true,
-    tags: ['temple-view', 'comfortable', 'clean', 'central'],
+    tags: ['temple-view', 'comfortable', 'clean', 'sea-view'],
     amenities: hotelAmenities.slice(0, 6),
     rooms: [
       {
@@ -65,7 +66,7 @@ const hotels: Hotel[] = [
           {
             id: 'room-img1',
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            url: 'https://lh3.ggpht.com/p/AF1QipMhFIfVI7tv2p3LdI3t7aXCe6e3ctGiUFZBfPKb=s1024',
             alt: 'Deluxe room'
           }
         ],
@@ -88,37 +89,37 @@ const hotels: Hotel[] = [
     updatedAt: '2025-01-12T00:00:00Z'
   },
   {
-    id: 'hotel-2',
+    id: 'ChIJLfX9VAhHvDsRZHnVTBYPYgc',
     type: 'hotel',
-    name: 'Naveen Beach Resort',
-    slug: 'naveen-beach-resort',
-    description: 'Beautiful beachfront property with stunning sea views and luxury amenities.',
-    shortDescription: 'Beachfront resort with sea views',
-    category: 'luxury',
+    name: 'Nestle Sahyadri Beachfront Homestay',
+    slug: 'nestle-sahyadri-beachfront-homestay',
+    description: 'Beachfront homestay with excellent hospitality, hygienic meals, and stunning views of Lord Shiva statue and sunset over the Arabian Sea.',
+    shortDescription: 'Beachfront homestay with sea views',
+    category: 'mid-range',
     images: [
       {
         id: 'img2',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-        alt: 'Naveen Beach Resort',
+        url: 'https://lh3.ggpht.com/p/AF1QipMiq01lItUBp9UjyhRqynw7oUbM7SHMvQiDnSEs=s1024',
+        alt: 'Nestle Sahyadri Beachfront Homestay',
         isPrimary: true
       }
     ],
     location: {
-      coordinates: { lat: 14.0950, lng: 74.4850 },
-      address: 'Beach Road, Murudeshwar, Karnataka 581350',
-      landmark: 'Murudeshwar Beach',
-      distanceFromTemple: 0.1
+      coordinates: { lat: 14.110781, lng: 74.4855951 },
+      address: 'House No 1, Christian Colony, Tuddalli, Bailur, Murdeshwar, Karnataka 581350',
+      landmark: 'Beachfront',
+      distanceFromTemple: 1.5
     },
     contact: {
-      phone: '+91 8385 260002',
-      whatsapp: '+91 9876543211',
-      email: 'info@naveenbeach.com'
+      phone: '919945494973',
+      whatsapp: '919945494973',
+      website: 'https://beachstaymurudeshwar.in/'
     },
     rating: {
-      average: 4.3,
-      count: 892,
-      breakdown: { 5: 445, 4: 267, 3: 134, 2: 31, 1: 15 }
+      average: 4.9,
+      count: 588,
+      breakdown: { 5: 529, 4: 47, 3: 9, 2: 2, 1: 1 }
     },
     isInstantConfirm: true,
     isVerified: true,
@@ -159,37 +160,37 @@ const hotels: Hotel[] = [
     updatedAt: '2025-01-18T00:00:00Z'
   },
   {
-    id: 'hotel-3',
+    id: 'ChIJ9zzFW9JBvDsR5J35VOP_r6k',
     type: 'hotel',
-    name: 'Sea View Resort',
-    slug: 'sea-view-resort',
-    description: 'A premium beachside resort offering luxury accommodations and world-class service.',
-    shortDescription: 'Premium beachside resort',
-    category: 'luxury',
+    name: 'Coastal Pearl Homestay',
+    slug: 'coastal-pearl-homestay',
+    description: 'Excellent property with outstanding hospitality and management, perfect for a peaceful vacation near Murudeshwar beach and hills.',
+    shortDescription: 'Cozy homestay near beach',
+    category: 'mid-range',
     images: [
       {
         id: 'img3',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-        alt: 'Sea View Resort',
+        url: 'https://lh3.ggpht.com/p/AF1QipMUicwuX4PDJzfSPV28VbDFRIFf7-FSt7IOhtg2=s1024',
+        alt: 'Coastal Pearl Homestay',
         isPrimary: true
       }
     ],
     location: {
-      coordinates: { lat: 14.0960, lng: 74.4855 },
-      address: 'Coastal Road, Murudeshwar, Karnataka 581350',
-      landmark: 'Near Murudeshwar Beach',
-      distanceFromTemple: 0.3
+      coordinates: { lat: 14.0965413, lng: 74.5102689 },
+      address: '1, Hotel Road, opp. to RNS Highway, Konarkeri, Mavalli, Murdeshwar, Karnataka 581350',
+      landmark: 'Opposite RNS Highway',
+      distanceFromTemple: 2.0
     },
     contact: {
-      phone: '+91 8385 260003',
-      whatsapp: '+91 9876543212',
-      email: 'info@seaviewresort.com'
+      phone: '916361553206',
+      whatsapp: '916361553206',
+      website: 'https://www.coastalpearlhomestay.com/'
     },
     rating: {
-      average: 4.5,
-      count: 1156,
-      breakdown: { 5: 694, 4: 289, 3: 127, 2: 33, 1: 13 }
+      average: 4.9,
+      count: 320,
+      breakdown: { 5: 288, 4: 26, 3: 5, 2: 1, 1: 0 }
     },
     isInstantConfirm: true,
     isVerified: true,
@@ -230,37 +231,36 @@ const hotels: Hotel[] = [
     updatedAt: '2025-01-20T00:00:00Z'
   },
   {
-    id: 'hotel-4',
+    id: 'ChIJVTbOcdBGvDsR5FXaw3PiDpo',
     type: 'hotel',
-    name: 'Central Lodge',
-    slug: 'central-lodge',
-    description: 'Budget-friendly accommodation in the heart of Murudeshwar with basic amenities.',
-    shortDescription: 'Budget lodge in central location',
+    name: 'Aryana Guest House - Sea View',
+    slug: 'aryana-guest-house-sea-view',
+    description: 'Clean and comfortable guest house with balcony views, hot water facilities, and close to the beach and Shiva statue.',
+    shortDescription: 'Sea view guest house',
     category: 'budget',
     images: [
       {
         id: 'img4',
         type: 'image',
-        url: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-        alt: 'Central Lodge',
+        url: 'https://lh3.ggpht.com/p/AF1QipPAY_MqnFDEOSGirKxnOLe-wC4IcGuKFwJt2iMP=s1024',
+        alt: 'Aryana Guest House',
         isPrimary: true
       }
     ],
     location: {
-      coordinates: { lat: 14.0930, lng: 74.4840 },
-      address: 'Main Street, Murudeshwar, Karnataka 581350',
-      landmark: 'Near Murudeshwar Temple',
-      distanceFromTemple: 0.4
+      coordinates: { lat: 14.0921934, lng: 74.4883581 },
+      address: 'Beach road, Murdeshwar Temple Main Rd, Matadahitlu, Murdeshwar, Karnataka 581350',
+      landmark: 'Near Beach Road',
+      distanceFromTemple: 0.5
     },
     contact: {
-      phone: '+91 8385 260004',
-      whatsapp: '+91 9876543213',
-      email: 'info@centrallodge.com'
+      phone: '918988338383',
+      whatsapp: '918988338383'
     },
     rating: {
-      average: 3.8,
-      count: 324,
-      breakdown: { 5: 98, 4: 145, 3: 67, 2: 12, 1: 2 }
+      average: 4.1,
+      count: 2238,
+      breakdown: { 5: 1119, 4: 671, 3: 336, 2: 89, 1: 23 }
     },
     isInstantConfirm: true,
     isVerified: true,
@@ -590,12 +590,12 @@ const hotels: Hotel[] = [
 // Restaurants data
 const restaurants: Restaurant[] = [
   {
-    id: 'restaurant-1',
+    id: 'ChIJscd_0ttGvDsR0qmXqsHXCTE',
     type: 'restaurant',
     name: 'Naveen Beach Restaurant',
     slug: 'naveen-beach-restaurant',
-    description: 'Authentic coastal cuisine with fresh seafood and traditional Karnataka dishes. Located right on the beach with stunning ocean views.',
-    shortDescription: 'Fresh seafood with ocean views',
+    description: "Seaside hotel's dining room offering dishes from around the world & views over the ocean.",
+    shortDescription: 'Seaside dining with ocean views',
     images: [
       {
         id: 'rest-img1',
@@ -605,20 +605,19 @@ const restaurants: Restaurant[] = [
       }
     ],
     location: {
-      coordinates: { lat: 14.0955, lng: 74.4851 },
+      coordinates: { lat: 14.0945975, lng: 74.4885506 },
       address: 'Beach Road, Murudeshwar, Karnataka 581350',
       landmark: 'Near Murudeshwar Beach',
       distanceFromTemple: 0.8
     },
     contact: {
-      phone: '+91 8385 260101',
-      whatsapp: '+91 9876543301',
-      email: 'info@naveenbeach.com'
+      phone: '918385260101',
+      whatsapp: '918385260101'
     },
     rating: {
-      average: 4.3,
-      count: 1156,
-      breakdown: { 5: 578, 4: 347, 3: 173, 2: 42, 1: 16 }
+      average: 2.6,
+      count: 661,
+      breakdown: { 5: 132, 4: 99, 3: 132, 2: 132, 1: 166 }
     },
     isInstantConfirm: false,
     isVerified: true,
@@ -719,12 +718,12 @@ const restaurants: Restaurant[] = [
 // Scuba Operators data
 const scubaOperators: ScubaOperator[] = [
   {
-    id: 'scuba-1',
+    id: 'ChIJfTRmm89GvDsRlWZZvAgLpOM',
     type: 'scuba',
-    name: 'Netrani Island Diving',
-    slug: 'netrani-island-diving',
-    description: 'Premier scuba diving operator offering unforgettable underwater experiences at Netrani Island.',
-    shortDescription: 'PADI certified diving at Netrani Island',
+    name: 'Netrani Adventures',
+    slug: 'netrani-adventures',
+    description: 'Certified Scuba Diving Centre offering professional diving experiences at Netrani Island with experienced instructors.',
+    shortDescription: 'Certified scuba diving at Netrani',
     images: [
       {
         id: 'scuba-img1',
@@ -734,21 +733,20 @@ const scubaOperators: ScubaOperator[] = [
       }
     ],
     location: {
-      coordinates: { lat: 14.0935, lng: 74.4845 },
+      coordinates: { lat: 14.0947445, lng: 74.4877738 },
       address: 'Boat Jetty, Murudeshwar, Karnataka 581350',
       landmark: 'Near Murudeshwar Boat Jetty',
       distanceFromTemple: 0.7
     },
     contact: {
-      phone: '+91 8385 260201',
-      whatsapp: '+91 9876543401',
-      email: 'info@netranidiving.com',
-      website: 'https://netranidiving.com'
+      phone: '918385260201',
+      whatsapp: '918385260201',
+      email: 'info@netraniadventures.com'
     },
     rating: {
       average: 4.7,
-      count: 423,
-      breakdown: { 5: 298, 4: 89, 3: 28, 2: 6, 1: 2 }
+      count: 1405,
+      breakdown: { 5: 1053, 4: 281, 3: 56, 2: 11, 1: 4 }
     },
     isInstantConfirm: false,
     isVerified: true,
