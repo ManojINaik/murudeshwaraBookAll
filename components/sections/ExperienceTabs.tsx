@@ -1,46 +1,80 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Hotel, UtensilsCrossed, Waves, Ship, MapPin, Star, TrendingUp, ArrowRight } from 'lucide-react';
+import { hotels, restaurants, scubaOperators, boatingOperators } from '@/data/providers';
+import { formatPrice } from '@/lib/utils';
+import type { Provider } from '@/types';
 
 const tabs = [
-  { 
-    id: 'hotels', 
-    label: 'Hotels', 
-    count: '12 places',
+  {
+    id: 'hotels',
+    label: 'Hotels',
+    count: `${hotels.length} places`,
     icon: Hotel,
     color: 'from-blue-500 to-indigo-600',
     bgColor: 'bg-blue-50',
-    description: 'Luxury stays & beach resorts'
+    description: 'Luxury stays & beach resorts',
+    providers: hotels.slice(0, 3)
   },
-  { 
-    id: 'restaurants', 
-    label: 'Restaurants', 
-    count: '8 places',
+  {
+    id: 'restaurants',
+    label: 'Restaurants',
+    count: `${restaurants.length} places`,
     icon: UtensilsCrossed,
     color: 'from-orange-500 to-red-600',
     bgColor: 'bg-orange-50',
-    description: 'Authentic coastal cuisine'
+    description: 'Authentic coastal cuisine',
+    providers: restaurants.slice(0, 3)
   },
-  { 
-    id: 'scuba-diving', 
-    label: 'Scuba diving', 
-    count: '4 operators',
+  {
+    id: 'scuba-diving',
+    label: 'Scuba diving',
+    count: `${scubaOperators.length} operators`,
     icon: Waves,
     color: 'from-teal-500 to-cyan-600',
     bgColor: 'bg-teal-50',
-    description: 'Underwater adventures'
+    description: 'Underwater adventures',
+    providers: scubaOperators.slice(0, 3)
   },
-  { 
-    id: 'boating', 
-    label: 'Boating', 
-    count: '3 services',
+  {
+    id: 'boating',
+    label: 'Boating',
+    count: `${boatingOperators.length} services`,
     icon: Ship,
     color: 'from-purple-500 to-violet-600',
     bgColor: 'bg-purple-50',
-    description: 'Coastal boat rides'
+    description: 'Coastal boat rides',
+    providers: boatingOperators.slice(0, 3)
   },
 ];
+
+// Helper function to generate WhatsApp booking link
+const generateWhatsAppLink = (provider: Provider): string => {
+  const phone = provider.contact.whatsapp || provider.contact.phone;
+  const cleanPhone = phone.replace(/[^0-9]/g, '');
+  const googleMapsLink = `https://www.google.com/maps/place/${provider.name}/@${provider.location.coordinates.lat},${provider.location.coordinates.lng}`;
+  const message = `Hi, I would like to book ${provider.name} in Murudeshwar. Here's the Google Maps link: ${googleMapsLink}`;
+  const encodedMessage = encodeURIComponent(message);
+  return `https://api.whatsapp.com/send/?phone=${cleanPhone}&text=${encodedMessage}&type=phone_number&app_absent=0`;
+};
+
+// Helper function to get price for a provider
+const getPrice = (provider: Provider): { amount: number; unit: string } => {
+  switch (provider.type) {
+    case 'hotel':
+      return { amount: provider.rooms[0]?.basePrice || 0, unit: 'night' };
+    case 'restaurant':
+      return { amount: provider.averageCostForTwo, unit: 'for two' };
+    case 'scuba':
+      return { amount: provider.packages[0]?.price || 0, unit: 'person' };
+    case 'boating':
+      return { amount: provider.trips[0]?.price || 0, unit: 'person' };
+    default:
+      return { amount: 0, unit: 'unit' };
+  }
+};
 
 export function ExperienceTabs() {
   const [activeTab, setActiveTab] = useState('hotels');
@@ -115,76 +149,93 @@ export function ExperienceTabs() {
 
         {/* Content Cards - Modern Grid Layout */}
         <div className="max-w-6xl mx-auto animate-fade-up">
-          {activeTabData && (
+          {activeTabData && activeTabData.providers && (
             <div className="mb-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Display Cards - 3 Featured Items */}
-                {[1, 2, 3].map((item) => (
-                  <div 
-                    key={item} 
-                    className="bg-white rounded-2xl shadow-card overflow-hidden group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
-                  >
-                    {/* Card Image */}
-                    <div className="h-56 relative overflow-hidden">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${activeTabData.color} opacity-80`} />
-                      <div className="absolute inset-0 opacity-60 group-hover:opacity-40 transition-opacity duration-500">
-                        <img 
-                          src="/MurudeshwarHero.png" 
-                          alt={`${activeTabData.label} in Murudeshwar`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold">
-                        Featured
-                      </div>
-                      <div className="absolute inset-0 flex items-end p-6">
-                        <div>
-                          <h3 className="text-xl font-bold text-white mb-1">
-                            {activeTabData.label} {item}
-                          </h3>
-                          <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                            <Star className="w-4 h-4 fill-yellow-100 text-yellow-100" />
-                            <span className="text-white text-xs ml-1">(120+)</span>
+                {activeTabData.providers.map((provider, index) => {
+                  const pricing = getPrice(provider);
+                  return (
+                    <div
+                      key={provider.id}
+                      className="bg-white rounded-2xl shadow-card overflow-hidden group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
+                    >
+                      {/* Card Image */}
+                      <div className="h-56 relative overflow-hidden">
+                        <div className="absolute inset-0 opacity-60 group-hover:opacity-40 transition-opacity duration-500">
+                          <img
+                            src={provider.images[0]?.url || "/MurudeshwarHero.png"}
+                            alt={provider.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className={`absolute inset-0 bg-gradient-to-br ${activeTabData.color} opacity-30`} />
+                        {index === 0 && activeTab === 'hotels' && (
+                          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold">
+                            Featured
+                          </div>
+                        )}
+                        <div className="absolute inset-0 flex items-end p-6">
+                          <div>
+                            <h3 className="text-xl font-bold text-white mb-1 line-clamp-1">
+                              {provider.name}
+                            </h3>
+                            <div className="flex items-center gap-1">
+                              {[1, 2, 3, 4, 5].map((star) => (
+                                <Star
+                                  key={star}
+                                  className={`w-4 h-4 ${
+                                    star <= Math.round(provider.rating.average)
+                                      ? 'fill-yellow-400 text-yellow-400'
+                                      : 'fill-yellow-100 text-yellow-100'
+                                  }`}
+                                />
+                              ))}
+                              <span className="text-white text-xs ml-1">({provider.rating.count}+)</span>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    
-                    {/* Card Content */}
-                    <div className="p-6">
-                      <div className="flex items-center gap-2 mb-4">
-                        <MapPin className="w-4 h-4 text-primary-600" />
-                        <span className="text-sm text-neutral-600">5 min from Murudeshwar Temple</span>
-                      </div>
-                      
-                      <p className="text-neutral-600 mb-4">
-                        {activeTabData.description} with stunning views and exceptional service.
-                      </p>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="text-sm">
-                          <span className="text-neutral-500">From</span>
-                          <span className="text-xl font-bold text-neutral-900 ml-2">₹1,899</span>
+
+                      {/* Card Content */}
+                      <div className="p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <MapPin className="w-4 h-4 text-primary-600" />
+                          <span className="text-sm text-neutral-600">{provider.location.distanceFromTemple} km from temple</span>
                         </div>
-                        
-                        <button className={`px-4 py-2 rounded-xl bg-gradient-to-r ${activeTabData.color} text-white font-medium hover:shadow-lg transition-all duration-300`}>
-                          View details
-                        </button>
+
+                        <p className="text-neutral-600 mb-4 line-clamp-2">
+                          {provider.shortDescription}
+                        </p>
+
+                        <div className="flex items-center justify-between">
+                          <div className="text-sm">
+                            <span className="text-neutral-500">From</span>
+                            <span className="text-xl font-bold text-neutral-900 ml-2">{formatPrice(pricing.amount)}</span>
+                          </div>
+
+                          <a
+                            href={generateWhatsAppLink(provider)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`px-4 py-2 rounded-xl bg-gradient-to-r ${activeTabData.color} text-white font-medium hover:shadow-lg transition-all duration-300`}
+                          >
+                            Book now
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
               
               <div className="text-center mt-12">
-                <button className="bg-white px-8 py-3 rounded-xl shadow-sm border border-primary-100 text-primary-800 font-medium hover:shadow-md hover:bg-primary-50 transition-all duration-300 flex items-center gap-2 mx-auto">
-                  View all {activeTabData.count}
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+                <Link href="/properties">
+                  <button className="bg-white px-8 py-3 rounded-xl shadow-sm border border-primary-100 text-primary-800 font-medium hover:shadow-md hover:bg-primary-50 transition-all duration-300 flex items-center gap-2 mx-auto">
+                    View all {activeTabData.count}
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </Link>
               </div>
             </div>
           )}
@@ -197,21 +248,21 @@ export function ExperienceTabs() {
                 <div className="p-2 bg-yellow-50 rounded-full">
                   <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 </div>
-                <span className="font-semibold text-neutral-800">4.8+ Rating</span>
+                <span className="font-semibold text-neutral-800">4.5+ Rating</span>
               </div>
               <div className="w-px h-10 bg-neutral-200 hidden md:block" />
               <div className="flex items-center gap-2">
                 <div className="p-2 bg-primary-50 rounded-full">
                   <MapPin className="w-5 h-5 text-primary-600" />
                 </div>
-                <span className="font-semibold text-neutral-800">27+ Locations</span>
+                <span className="font-semibold text-neutral-800">{hotels.length + restaurants.length + scubaOperators.length}+ Locations</span>
               </div>
               <div className="w-px h-10 bg-neutral-200 hidden md:block" />
               <div className="flex items-center gap-2">
                 <div className="p-2 bg-green-50 rounded-full">
                   <TrendingUp className="w-5 h-5 text-green-500" />
                 </div>
-                <span className="font-semibold text-neutral-800">10K+ Bookings</span>
+                <span className="font-semibold text-neutral-800">5K+ Happy Guests</span>
               </div>
             </div>
           </div>

@@ -17,6 +17,96 @@ const hotelAmenities: Amenity[] = [
 // Hotels data from CSV - Top 50 rated properties
 const hotels: Hotel[] = [
   {
+    "id": "ChIJLw4orXBHvDsRQe-kl4dONDs",
+    "type": "hotel",
+    "name": "Mavalli Sea House",
+    "slug": "mavalli-sea-house",
+    "description": "A great place in Murudeshwar",
+    "shortDescription": "Great accommodation",
+    "images": [
+      {
+        "id": "img-1",
+        "type": "image",
+        "url": "https://lh3.ggpht.com/p/AF1QipNuYN64dWUKH9uEmX9bfLZWrbYpfjpmhI5MVI1m=s1024",
+        "alt": "Mavalli Sea House",
+        "isPrimary": true
+      }
+    ],
+    "location": {
+      "coordinates": {
+        "lat": 14.0945,
+        "lng": 74.4845
+      },
+      "address": "2, Christ the King Church Rd, Matadahitlu, Mavalli, Murdeshwar, Karnataka 581350",
+      "landmark": "Near Murudeshwar Temple",
+      "distanceFromTemple": 1.98
+    },
+    "contact": {
+      "phone": "09741696107",
+      "whatsapp": "09741696107",
+      "website": "https://mavalliseahouse.com/"
+    },
+    "rating": {
+      "average": 4.1,
+      "count": 25,
+      "breakdown": {
+        "1": 0,
+        "2": 1,
+        "3": 3,
+        "4": 7,
+        "5": 12
+      }
+    },
+    "isInstantConfirm": false,
+    "isVerified": true,
+    "tags": [
+      "parking",
+      "price",
+      "clean rooms",
+      "mirror",
+      "tv"
+    ],
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "category": "mid-range",
+    "amenities": hotelAmenities.slice(0, 6),
+    "rooms": [
+      {
+        "id": "room-1",
+        "name": "Standard Room",
+        "description": "Comfortable room with modern amenities",
+        "capacity": 2,
+        "bedType": "Queen Bed",
+        "area": 250,
+        "images": [
+          {
+            "id": "room-img-1",
+            "type": "image",
+            "url": "https://lh3.ggpht.com/p/AF1QipNuYN64dWUKH9uEmX9bfLZWrbYpfjpmhI5MVI1m=s1024",
+            "alt": "Room"
+          }
+        ],
+        "amenities": hotelAmenities.slice(0, 4),
+        "basePrice": 3654,
+        "taxes": 360,
+        "availability": true
+      }
+    ],
+    "checkInTime": "14:00",
+    "checkOutTime": "11:00",
+    "policies": {
+      "cancellation": "Free cancellation up to 24 hours before check-in",
+      "children": "Children under 10 stay free",
+      "pets": "Pets not allowed",
+      "smoking": "Non-smoking property"
+    },
+    "nearbyAttractions": [
+      "Murudeshwar Temple",
+      "Beach",
+      "Local Markets"
+    ]
+  },
+  {
     "id": "ChIJUX4v-w5BvDsR5G7Jw5CEVMA",
     "type": "hotel",
     "name": "Shri Murudeshwara Shiva Temple",
@@ -4183,89 +4273,6 @@ const hotels: Hotel[] = [
         ],
         "amenities": hotelAmenities.slice(0, 4),
         "basePrice": 4244,
-        "taxes": 360,
-        "availability": true
-      }
-    ],
-    "checkInTime": "14:00",
-    "checkOutTime": "11:00",
-    "policies": {
-      "cancellation": "Free cancellation up to 24 hours before check-in",
-      "children": "Children under 10 stay free",
-      "pets": "Pets not allowed",
-      "smoking": "Non-smoking property"
-    },
-    "nearbyAttractions": [
-      "Murudeshwar Temple",
-      "Beach",
-      "Local Markets"
-    ]
-  },
-  {
-    "id": "ChIJdyzMBp1HvDsRR7l1TFcn8EI",
-    "type": "hotel",
-    "name": "JMJ chicken center",
-    "slug": "jmj-chicken-center",
-    "description": "A great place in Murudeshwar",
-    "shortDescription": "Great accommodation",
-    "images": [
-      {
-        "id": "img-1",
-        "type": "image",
-        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
-        "alt": "JMJ chicken center",
-        "isPrimary": true
-      }
-    ],
-    "location": {
-      "coordinates": {
-        "lat": 14.0945,
-        "lng": 74.4845
-      },
-      "address": "Murudeshwar, Karnataka 581350",
-      "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.89
-    },
-    "contact": {
-      "phone": "919876543210",
-      "whatsapp": "919876543210"
-    },
-    "rating": {
-      "average": 5,
-      "count": 2,
-      "breakdown": {
-        "1": 0,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 1
-      }
-    },
-    "isInstantConfirm": true,
-    "isVerified": true,
-    "tags": [],
-    "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.442Z",
-    "category": "mid-range",
-    "amenities": hotelAmenities.slice(0, 6),
-    "rooms": [
-      {
-        "id": "room-1",
-        "name": "Standard Room",
-        "description": "Comfortable room with modern amenities",
-        "capacity": 2,
-        "bedType": "Queen Bed",
-        "area": 250,
-        "images": [
-          {
-            "id": "room-img-1",
-            "type": "image",
-            "url": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800",
-            "alt": "Room"
-          }
-        ],
-        "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 5324,
         "taxes": 360,
         "availability": true
       }

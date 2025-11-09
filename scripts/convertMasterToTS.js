@@ -4,16 +4,27 @@ const path = require('path');
 const jsonPath = path.join(__dirname, '../data/providers-master.json');
 const allProviders = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
 
+// Find Mavalli Sea House specifically
+const mavalliSeaHouse = allProviders.find(p => p.id === 'ChIJLw4orXBHvDsRQe-kl4dONDs');
+
 // Sort providers by rating and review count
 function scoreProvider(p) {
   return (p.rating.average * 100) + (p.rating.count / 10);
 }
 
 // Get top providers from each category
-const hotels = allProviders
+let hotels = allProviders
   .filter(p => p.type === 'hotel')
-  .sort((a, b) => scoreProvider(b) - scoreProvider(a))
-  .slice(0, 50); // Top 50 hotels
+  .sort((a, b) => scoreProvider(b) - scoreProvider(a));
+
+// If Mavalli Sea House exists, move it to the front
+if (mavalliSeaHouse) {
+  hotels = hotels.filter(p => p.id !== mavalliSeaHouse.id);
+  hotels.unshift(mavalliSeaHouse);
+}
+
+// Take top 50 hotels
+hotels = hotels.slice(0, 50);
 
 const restaurants = allProviders
   .filter(p => p.type === 'restaurant')
@@ -94,7 +105,8 @@ export const getProviderBySlug = (slug: string): Provider | undefined => {
 const outputPath = path.join(__dirname, '../data/providers.ts');
 fs.writeFileSync(outputPath, tsContent);
 console.log(`\nTypeScript providers file generated: ${outputPath}`);
-console.log(`\nTop 5 hotels by score:`);
-hotels.slice(0, 5).forEach(h => {
-  console.log(`  - ${h.name} (${h.rating.average}★, ${h.rating.count} reviews)`);
+console.log(`\nFirst hotel: ${hotels[0].name} ${hotels[0].id === 'ChIJLw4orXBHvDsRQe-kl4dONDs' ? '(Mavalli Sea House - Featured)' : ''}`);
+console.log(`\nTop 5 hotels:`);
+hotels.slice(0, 5).forEach((h, i) => {
+  console.log(`  ${i + 1}. ${h.name} (${h.rating.average}★, ${h.rating.count} reviews)`);
 });
