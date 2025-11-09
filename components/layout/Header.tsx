@@ -9,10 +9,10 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navigation = [
-    { name: 'Hotels', href: '/hotels' },
-    { name: 'Restaurants', href: '/restaurants' },
-    { name: 'Scuba Diving', href: '/scuba' },
-    { name: 'Boating', href: '/boating' },
+    { name: 'Hotels', href: '/properties?type=hotel' },
+    { name: 'Restaurants', href: '/properties?type=restaurant' },
+    { name: 'Scuba Diving', href: '/properties?type=scuba' },
+    { name: 'Boating', href: '/properties?type=boating' },
   ];
 
   useEffect(() => {

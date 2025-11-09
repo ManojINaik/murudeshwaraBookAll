@@ -61,6 +61,14 @@ function PropertiesContent() {
     }
   }, [searchParams]);
 
+  // Initialize category from URL parameter
+  useEffect(() => {
+    const type = searchParams.get('type');
+    if (type && ['hotel', 'restaurant', 'scuba', 'boating'].includes(type)) {
+      setActiveCategory(type);
+    }
+  }, [searchParams]);
+
   // Filter providers based on search and category
   const filteredProviders = allProviders.filter((provider: Provider) => {
     const matchesSearch = provider.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
