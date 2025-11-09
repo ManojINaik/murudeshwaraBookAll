@@ -6,6 +6,20 @@ import { allProviders } from '@/data/providers';
 import { Provider } from '@/types';
 import { formatPrice } from '@/lib/utils';
 
+// Helper function to generate WhatsApp booking link
+const generateWhatsAppLink = (provider: Provider): string => {
+  const phone = provider.contact.whatsapp || provider.contact.phone;
+  const cleanPhone = phone.replace(/[^0-9]/g, '');
+
+  // Generate Google Maps link from coordinates
+  const googleMapsLink = `https://www.google.com/maps/place/${provider.name}/@${provider.location.coordinates.lat},${provider.location.coordinates.lng}`;
+
+  const message = `Hi, I would like to book ${provider.name} in Murudeshwar. Here's the Google Maps link: ${googleMapsLink}`;
+  const encodedMessage = encodeURIComponent(message);
+
+  return `https://api.whatsapp.com/send/?phone=${cleanPhone}&text=${encodedMessage}&type=phone_number&app_absent=0`;
+};
+
 export function ProviderGrid() {
   const [activeCategory, setActiveCategory] = useState('hotel');
   
@@ -130,9 +144,14 @@ export function ProviderGrid() {
                   </div>
 
                   {/* Book Now Button */}
-                  <button className="w-full bg-neutral-900 text-white py-3 rounded-xl font-semibold hover:bg-neutral-800 transition-colors">
+                  <a
+                    href={generateWhatsAppLink(provider)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-neutral-900 text-white py-3 rounded-xl font-semibold hover:bg-neutral-800 transition-colors text-center"
+                  >
                     Book now
-                  </button>
+                  </a>
                 </div>
               </div>
             );
