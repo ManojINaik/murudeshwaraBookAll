@@ -39,7 +39,7 @@ const hotels: Hotel[] = [
       },
       "address": "2, Christ the King Church Rd, Matadahitlu, Mavalli, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.98
+      "distanceFromTemple": 0.67
     },
     "contact": {
       "phone": "09741696107",
@@ -67,7 +67,7 @@ const hotels: Hotel[] = [
       "tv"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -87,7 +87,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3654,
+        "basePrice": 3228,
         "taxes": 360,
         "availability": true
       }
@@ -129,7 +129,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.87
+      "distanceFromTemple": 1.36
     },
     "contact": {
       "phone": "919876543210",
@@ -150,7 +150,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.442Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -170,7 +170,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 2154,
+        "basePrice": 4648,
         "taxes": 360,
         "availability": true
       }
@@ -212,7 +212,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murdeshwar, Karnataka",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.19
+      "distanceFromTemple": 1.27
     },
     "contact": {
       "phone": "919876543210",
@@ -239,7 +239,7 @@ const hotels: Hotel[] = [
       "spiritual"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -259,7 +259,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3053,
+        "basePrice": 2889,
         "taxes": 360,
         "availability": true
       }
@@ -301,7 +301,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar Temple Hwy, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.79
+      "distanceFromTemple": 0.6
     },
     "contact": {
       "phone": "08762471752",
@@ -329,7 +329,7 @@ const hotels: Hotel[] = [
       "shiva"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.443Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -349,7 +349,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3136,
+        "basePrice": 6569,
         "taxes": 360,
         "availability": true
       }
@@ -391,7 +391,7 @@ const hotels: Hotel[] = [
       },
       "address": "Near Temple, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.36
+      "distanceFromTemple": 2.46
     },
     "contact": {
       "phone": "08660965151",
@@ -419,7 +419,7 @@ const hotels: Hotel[] = [
       "homestay"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "category": "luxury",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -439,7 +439,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3078,
+        "basePrice": 6563,
         "taxes": 360,
         "availability": true
       }
@@ -481,7 +481,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.93
+      "distanceFromTemple": 1.33
     },
     "contact": {
       "phone": "919876543210",
@@ -502,7 +502,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -522,7 +522,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 4357,
+        "basePrice": 5282,
         "taxes": 360,
         "availability": true
       }
@@ -564,7 +564,7 @@ const hotels: Hotel[] = [
       },
       "address": "Beach road, Murdeshwar Temple Main Rd, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.05
+      "distanceFromTemple": 1.89
     },
     "contact": {
       "phone": "08988338383",
@@ -591,7 +591,7 @@ const hotels: Hotel[] = [
       "budget"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "category": "luxury",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -611,7 +611,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 2833,
+        "basePrice": 5705,
         "taxes": 360,
         "availability": true
       }
@@ -653,7 +653,7 @@ const hotels: Hotel[] = [
       },
       "address": "Bus Stand, Murudeshwar Temple Hwy, opp. KSRTC Ticket Booking Centre, Gangavati, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.96
+      "distanceFromTemple": 1.64
     },
     "contact": {
       "phone": "09620625718",
@@ -680,7 +680,7 @@ const hotels: Hotel[] = [
       "cow"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.443Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -700,7 +700,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3838,
+        "basePrice": 6801,
         "taxes": 360,
         "availability": true
       }
@@ -742,7 +742,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.76
+      "distanceFromTemple": 1.04
     },
     "contact": {
       "phone": "919876543210",
@@ -763,7 +763,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -783,7 +783,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6264,
+        "basePrice": 6880,
         "taxes": 360,
         "availability": true
       }
@@ -825,7 +825,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.01
+      "distanceFromTemple": 2.17
     },
     "contact": {
       "phone": "919876543210",
@@ -846,7 +846,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.441Z",
+    "updatedAt": "2025-11-09T10:28:31.522Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -866,7 +866,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 5924,
+        "basePrice": 4322,
         "taxes": 360,
         "availability": true
       }
@@ -908,7 +908,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.15
+      "distanceFromTemple": 1.4
     },
     "contact": {
       "phone": "919876543210",
@@ -929,7 +929,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -949,7 +949,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6398,
+        "basePrice": 6674,
         "taxes": 360,
         "availability": true
       }
@@ -991,7 +991,7 @@ const hotels: Hotel[] = [
       },
       "address": "NH 17, Taluk, near RNS Hospital, Bhatkal, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.29
+      "distanceFromTemple": 1.46
     },
     "contact": {
       "phone": "08385268192",
@@ -1019,7 +1019,7 @@ const hotels: Hotel[] = [
       "vehicle"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.443Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1039,7 +1039,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3403,
+        "basePrice": 4683,
         "taxes": 360,
         "availability": true
       }
@@ -1081,7 +1081,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.31
+      "distanceFromTemple": 2.14
     },
     "contact": {
       "phone": "919876543210",
@@ -1102,7 +1102,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1122,7 +1122,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 5634,
+        "basePrice": 2858,
         "taxes": 360,
         "availability": true
       }
@@ -1164,7 +1164,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.74
+      "distanceFromTemple": 0.92
     },
     "contact": {
       "phone": "919876543210",
@@ -1185,7 +1185,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1205,7 +1205,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 5667,
+        "basePrice": 2629,
         "taxes": 360,
         "availability": true
       }
@@ -1247,7 +1247,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.78
+      "distanceFromTemple": 0.8
     },
     "contact": {
       "phone": "919876543210",
@@ -1268,7 +1268,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1288,7 +1288,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 5255,
+        "basePrice": 3700,
         "taxes": 360,
         "availability": true
       }
@@ -1330,7 +1330,7 @@ const hotels: Hotel[] = [
       },
       "address": "House No 1, Christian Colony, Tuddalli, Bailur, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.95
+      "distanceFromTemple": 1.92
     },
     "contact": {
       "phone": "09945494973",
@@ -1358,7 +1358,7 @@ const hotels: Hotel[] = [
       "statue"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "luxury",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1378,7 +1378,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 2673,
+        "basePrice": 3966,
         "taxes": 360,
         "availability": true
       }
@@ -1420,7 +1420,7 @@ const hotels: Hotel[] = [
       },
       "address": "Beach Road, Church Cross, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.78
+      "distanceFromTemple": 1.4
     },
     "contact": {
       "phone": "08904175022",
@@ -1448,7 +1448,7 @@ const hotels: Hotel[] = [
       "walking"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1468,7 +1468,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 2031,
+        "basePrice": 5461,
         "taxes": 360,
         "availability": true
       }
@@ -1510,7 +1510,7 @@ const hotels: Hotel[] = [
       },
       "address": "Naveen Beach Rd, Qazi Mohalla, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.24
+      "distanceFromTemple": 1.09
     },
     "contact": {
       "phone": "07406903665",
@@ -1538,7 +1538,7 @@ const hotels: Hotel[] = [
       "barbecue"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1558,7 +1558,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 2099,
+        "basePrice": 5758,
         "taxes": 360,
         "availability": true
       }
@@ -1600,7 +1600,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.76
+      "distanceFromTemple": 0.75
     },
     "contact": {
       "phone": "919876543210",
@@ -1621,7 +1621,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.442Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1641,7 +1641,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 2121,
+        "basePrice": 3732,
         "taxes": 360,
         "availability": true
       }
@@ -1683,7 +1683,7 @@ const hotels: Hotel[] = [
       },
       "address": "Naveen Beach Rd, Qazi Mohalla, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.6
+      "distanceFromTemple": 1.69
     },
     "contact": {
       "phone": "08989842828",
@@ -1711,7 +1711,7 @@ const hotels: Hotel[] = [
       "clean rooms"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.443Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1731,7 +1731,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6196,
+        "basePrice": 4711,
         "taxes": 360,
         "availability": true
       }
@@ -1773,7 +1773,7 @@ const hotels: Hotel[] = [
       },
       "address": "GOLF BEACH ROAD, near church, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.94
+      "distanceFromTemple": 1.58
     },
     "contact": {
       "phone": "09482321777",
@@ -1801,7 +1801,7 @@ const hotels: Hotel[] = [
       "sound"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.443Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1821,7 +1821,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 5770,
+        "basePrice": 2481,
         "taxes": 360,
         "availability": true
       }
@@ -1863,7 +1863,7 @@ const hotels: Hotel[] = [
       },
       "address": "1, Hotel Road, opp. to RNS Highway, Konarkeri, Mavalli, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.12
+      "distanceFromTemple": 1.57
     },
     "contact": {
       "phone": "06361553206",
@@ -1891,7 +1891,7 @@ const hotels: Hotel[] = [
       "feel"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -1911,7 +1911,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 4009,
+        "basePrice": 6216,
         "taxes": 360,
         "availability": true
       }
@@ -1953,7 +1953,7 @@ const hotels: Hotel[] = [
       },
       "address": "Naveen Beach Rd, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.38
+      "distanceFromTemple": 0.53
     },
     "contact": {
       "phone": "08762471917",
@@ -1981,7 +1981,7 @@ const hotels: Hotel[] = [
       "quality"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "category": "luxury",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2001,7 +2001,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6392,
+        "basePrice": 2359,
         "taxes": 360,
         "availability": true
       }
@@ -2043,7 +2043,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.53
+      "distanceFromTemple": 1.41
     },
     "contact": {
       "phone": "919876543210",
@@ -2064,7 +2064,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.437Z",
+    "updatedAt": "2025-11-09T10:28:31.518Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2084,7 +2084,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6916,
+        "basePrice": 5456,
         "taxes": 360,
         "availability": true
       }
@@ -2126,7 +2126,7 @@ const hotels: Hotel[] = [
       },
       "address": "Bailur Beach Road, Bastimakki, Near, Ocean Edge Beach Resort Rd, Bailur, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.21
+      "distanceFromTemple": 0.74
     },
     "contact": {
       "phone": "09008031744",
@@ -2154,7 +2154,7 @@ const hotels: Hotel[] = [
       "co operative"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2174,7 +2174,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 5794,
+        "basePrice": 2920,
         "taxes": 360,
         "availability": true
       }
@@ -2216,7 +2216,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.13
+      "distanceFromTemple": 0.94
     },
     "contact": {
       "phone": "919876543210",
@@ -2237,7 +2237,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.441Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2257,7 +2257,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6675,
+        "basePrice": 4166,
         "taxes": 360,
         "availability": true
       }
@@ -2299,7 +2299,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.77
+      "distanceFromTemple": 0.86
     },
     "contact": {
       "phone": "919876543210",
@@ -2320,7 +2320,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2340,7 +2340,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6098,
+        "basePrice": 3820,
         "taxes": 360,
         "availability": true
       }
@@ -2382,7 +2382,7 @@ const hotels: Hotel[] = [
       },
       "address": "3FWX+5X2, Murudeshwar Temple Hwy, Mavalli, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.23
+      "distanceFromTemple": 1.48
     },
     "contact": {
       "phone": "919876543210",
@@ -2407,7 +2407,7 @@ const hotels: Hotel[] = [
       "nature"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.443Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "budget",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2427,7 +2427,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3724,
+        "basePrice": 5191,
         "taxes": 360,
         "availability": true
       }
@@ -2469,7 +2469,7 @@ const hotels: Hotel[] = [
       },
       "address": "SHIVANUGRAHA,Konarkeri, Uttarkoppa Road, Murdeshwar, Karnataka 581421",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.16
+      "distanceFromTemple": 0.65
     },
     "contact": {
       "phone": "09986027593",
@@ -2496,7 +2496,7 @@ const hotels: Hotel[] = [
       "kitchen"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2516,7 +2516,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6449,
+        "basePrice": 3831,
         "taxes": 360,
         "availability": true
       }
@@ -2558,7 +2558,7 @@ const hotels: Hotel[] = [
       },
       "address": "4F7P+PG Shivani’s sunset bay beach resort, Bastimakki, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.35
+      "distanceFromTemple": 2.38
     },
     "contact": {
       "phone": "919876543210",
@@ -2585,7 +2585,7 @@ const hotels: Hotel[] = [
       "check-in"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.526Z",
     "category": "luxury",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2605,7 +2605,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3056,
+        "basePrice": 6951,
         "taxes": 360,
         "availability": true
       }
@@ -2647,7 +2647,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.92
+      "distanceFromTemple": 1.71
     },
     "contact": {
       "phone": "919876543210",
@@ -2668,7 +2668,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.437Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2688,7 +2688,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 2110,
+        "basePrice": 5603,
         "taxes": 360,
         "availability": true
       }
@@ -2730,7 +2730,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar Temple Hwy, opposite Sea Beach view, Beach, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.75
+      "distanceFromTemple": 2.48
     },
     "contact": {
       "phone": "08088998888",
@@ -2756,7 +2756,7 @@ const hotels: Hotel[] = [
       "parking"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "category": "budget",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2776,7 +2776,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6990,
+        "basePrice": 6825,
         "taxes": 360,
         "availability": true
       }
@@ -2818,7 +2818,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.06
+      "distanceFromTemple": 1.46
     },
     "contact": {
       "phone": "919876543210",
@@ -2839,7 +2839,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2859,7 +2859,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3099,
+        "basePrice": 5352,
         "taxes": 360,
         "availability": true
       }
@@ -2901,7 +2901,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.65
+      "distanceFromTemple": 1.67
     },
     "contact": {
       "phone": "919876543210",
@@ -2922,7 +2922,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -2942,7 +2942,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3951,
+        "basePrice": 6618,
         "taxes": 360,
         "availability": true
       }
@@ -2984,7 +2984,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.92
+      "distanceFromTemple": 1.28
     },
     "contact": {
       "phone": "919876543210",
@@ -3005,7 +3005,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3025,7 +3025,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 4679,
+        "basePrice": 2737,
         "taxes": 360,
         "availability": true
       }
@@ -3067,7 +3067,7 @@ const hotels: Hotel[] = [
       },
       "address": "4F7P+PG, Bastimakki, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.26
+      "distanceFromTemple": 1.46
     },
     "contact": {
       "phone": "919876543210",
@@ -3088,7 +3088,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "category": "luxury",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3108,7 +3108,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 4412,
+        "basePrice": 5177,
         "taxes": 360,
         "availability": true
       }
@@ -3150,7 +3150,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.82
+      "distanceFromTemple": 1.9
     },
     "contact": {
       "phone": "919876543210",
@@ -3171,7 +3171,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.441Z",
+    "updatedAt": "2025-11-09T10:28:31.522Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3191,7 +3191,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3508,
+        "basePrice": 4058,
         "taxes": 360,
         "availability": true
       }
@@ -3233,7 +3233,7 @@ const hotels: Hotel[] = [
       },
       "address": "3FRQ+2QC, NH 66, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.79
+      "distanceFromTemple": 1.67
     },
     "contact": {
       "phone": "09611547015",
@@ -3254,7 +3254,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3274,7 +3274,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3512,
+        "basePrice": 4863,
         "taxes": 360,
         "availability": true
       }
@@ -3316,7 +3316,7 @@ const hotels: Hotel[] = [
       },
       "address": "Kaikini, Murdeshwar, Bhatkal, Karnataka 581421",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.87
+      "distanceFromTemple": 1.54
     },
     "contact": {
       "phone": "07090550433",
@@ -3339,7 +3339,7 @@ const hotels: Hotel[] = [
       "price"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3359,7 +3359,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 4214,
+        "basePrice": 3129,
         "taxes": 360,
         "availability": true
       }
@@ -3401,7 +3401,7 @@ const hotels: Hotel[] = [
       },
       "address": "3FQV+7RC, KG School basti road, near Mahima event hall, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.67
+      "distanceFromTemple": 2.3
     },
     "contact": {
       "phone": "919876543210",
@@ -3422,7 +3422,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3442,7 +3442,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3331,
+        "basePrice": 3283,
         "taxes": 360,
         "availability": true
       }
@@ -3484,7 +3484,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.61
+      "distanceFromTemple": 1.16
     },
     "contact": {
       "phone": "919876543210",
@@ -3505,7 +3505,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3525,7 +3525,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6036,
+        "basePrice": 2258,
         "taxes": 360,
         "availability": true
       }
@@ -3588,7 +3588,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3608,7 +3608,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 4110,
+        "basePrice": 3617,
         "taxes": 360,
         "availability": true
       }
@@ -3650,7 +3650,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.97
+      "distanceFromTemple": 1.63
     },
     "contact": {
       "phone": "919876543210",
@@ -3671,7 +3671,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.442Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3691,7 +3691,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6364,
+        "basePrice": 3986,
         "taxes": 360,
         "availability": true
       }
@@ -3733,7 +3733,7 @@ const hotels: Hotel[] = [
       },
       "address": "3GV4+637, Road, Mavalli, Murdeshwar, Karnataka 581421",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.38
+      "distanceFromTemple": 2.05
     },
     "contact": {
       "phone": "919876543210",
@@ -3754,7 +3754,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.443Z",
+    "updatedAt": "2025-11-09T10:28:31.524Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3774,7 +3774,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 5980,
+        "basePrice": 3242,
         "taxes": 360,
         "availability": true
       }
@@ -3816,7 +3816,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.55
+      "distanceFromTemple": 1.25
     },
     "contact": {
       "phone": "919876543210",
@@ -3837,7 +3837,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3857,7 +3857,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 2613,
+        "basePrice": 3171,
         "taxes": 360,
         "availability": true
       }
@@ -3899,7 +3899,7 @@ const hotels: Hotel[] = [
       },
       "address": "Sheshu Compound, Murdeshwar Rd, near Bakthal, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.23
+      "distanceFromTemple": 1.76
     },
     "contact": {
       "phone": "919876543210",
@@ -3920,7 +3920,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.438Z",
+    "updatedAt": "2025-11-09T10:28:31.519Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -3940,7 +3940,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3849,
+        "basePrice": 3586,
         "taxes": 360,
         "availability": true
       }
@@ -3982,7 +3982,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.37
+      "distanceFromTemple": 1.7
     },
     "contact": {
       "phone": "919876543210",
@@ -4003,7 +4003,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -4023,7 +4023,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3007,
+        "basePrice": 3647,
         "taxes": 360,
         "availability": true
       }
@@ -4065,7 +4065,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.29
+      "distanceFromTemple": 0.66
     },
     "contact": {
       "phone": "919876543210",
@@ -4086,7 +4086,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -4106,7 +4106,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 3145,
+        "basePrice": 5200,
         "taxes": 360,
         "availability": true
       }
@@ -4148,7 +4148,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar Temple Hwy, Beach Road, Matadahitlu, Murdeshwara, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.45
+      "distanceFromTemple": 2.24
     },
     "contact": {
       "phone": "919876543210",
@@ -4169,7 +4169,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.439Z",
+    "updatedAt": "2025-11-09T10:28:31.520Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -4189,7 +4189,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 6270,
+        "basePrice": 6596,
         "taxes": 360,
         "availability": true
       }
@@ -4231,7 +4231,7 @@ const hotels: Hotel[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.46
+      "distanceFromTemple": 1.39
     },
     "contact": {
       "phone": "919876543210",
@@ -4252,7 +4252,7 @@ const hotels: Hotel[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.442Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "category": "mid-range",
     "amenities": hotelAmenities.slice(0, 6),
     "rooms": [
@@ -4272,7 +4272,7 @@ const hotels: Hotel[] = [
           }
         ],
         "amenities": hotelAmenities.slice(0, 4),
-        "basePrice": 4244,
+        "basePrice": 4256,
         "taxes": 360,
         "availability": true
       }
@@ -4318,7 +4318,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "Murudeshwar Temple Main Road, Murudeshwara, Opp H.P Gas, Bhatkal, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.44
+      "distanceFromTemple": 0.94
     },
     "contact": {
       "phone": "09535961455",
@@ -4346,7 +4346,7 @@ const restaurants: Restaurant[] = [
       "railway station"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -4399,7 +4399,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 667
+    "averageCostForTwo": 1815
   },
   {
     "id": "ChIJIfyHDx1HvDsRadtMKD7ryTk",
@@ -4424,7 +4424,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "opp. to canara bank, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.89
+      "distanceFromTemple": 1.18
     },
     "contact": {
       "phone": "919876543210",
@@ -4447,7 +4447,7 @@ const restaurants: Restaurant[] = [
       "curry"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.441Z",
+    "updatedAt": "2025-11-09T10:28:31.522Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -4500,7 +4500,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1818
+    "averageCostForTwo": 1424
   },
   {
     "id": "ChIJOWGrLwBHvDsRv4F5BbevGJY",
@@ -4525,7 +4525,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "3FVQ+WXX, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.09
+      "distanceFromTemple": 1.34
     },
     "contact": {
       "phone": "919876543210",
@@ -4548,7 +4548,7 @@ const restaurants: Restaurant[] = [
       "idli"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.441Z",
+    "updatedAt": "2025-11-09T10:28:31.522Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -4601,7 +4601,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1604
+    "averageCostForTwo": 985
   },
   {
     "id": "ChIJrzoYXnBHvDsR_WQYFzyYjGo",
@@ -4626,7 +4626,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "Ocean Edge Beach Resort Rd, Murdeshwar, Bailur, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.57
+      "distanceFromTemple": 1.63
     },
     "contact": {
       "phone": "919876543210",
@@ -4654,7 +4654,7 @@ const restaurants: Restaurant[] = [
       "property"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -4707,7 +4707,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1738
+    "averageCostForTwo": 1032
   },
   {
     "id": "ChIJvTO5HgBBvDsRGATPBdR1G0Y",
@@ -4732,7 +4732,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "NH 66, Kaikini, Murdeshwar, Mavalli, Karnataka 581421",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.98
+      "distanceFromTemple": 2.34
     },
     "contact": {
       "phone": "919876543210",
@@ -4754,7 +4754,7 @@ const restaurants: Restaurant[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.441Z",
+    "updatedAt": "2025-11-09T10:28:31.522Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -4807,7 +4807,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 700
+    "averageCostForTwo": 1571
   },
   {
     "id": "ChIJV--VFABBvDsRiaP5UmAVY74",
@@ -4832,7 +4832,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "ಮೂಡಲ ಮನೆ ವಠಾರ, 1, Mane Colony, Moodala, Mavalli, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.5
+      "distanceFromTemple": 1.15
     },
     "contact": {
       "phone": "919876543210",
@@ -4853,7 +4853,7 @@ const restaurants: Restaurant[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.441Z",
+    "updatedAt": "2025-11-09T10:28:31.522Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -4906,7 +4906,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1737
+    "averageCostForTwo": 1510
   },
   {
     "id": "ChIJ10ABGs5gvjsRQwcq7Fa-_qs",
@@ -4931,7 +4931,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "Golf beach Road, Taluk, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.5
+      "distanceFromTemple": 1.76
     },
     "contact": {
       "phone": "09483421777",
@@ -4958,7 +4958,7 @@ const restaurants: Restaurant[] = [
       "behaviour"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -5011,7 +5011,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1292
+    "averageCostForTwo": 717
   },
   {
     "id": "ChIJOcygy09mvDsRi-KqfEhKvzk",
@@ -5036,7 +5036,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "Toodalli, Village, Yedthare Post, Shirur, Checkpost, Baindur, Karnataka 576228",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.21
+      "distanceFromTemple": 0.87
     },
     "contact": {
       "phone": "07760976680",
@@ -5063,7 +5063,7 @@ const restaurants: Restaurant[] = [
       "river"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -5116,7 +5116,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 720
+    "averageCostForTwo": 1520
   },
   {
     "id": "ChIJMUbdnMVHvDsRsBMArHQbeSc",
@@ -5141,7 +5141,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "H.no 07, on the, beach, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.55
+      "distanceFromTemple": 1.55
     },
     "contact": {
       "phone": "09945434843",
@@ -5168,7 +5168,7 @@ const restaurants: Restaurant[] = [
       "property"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.442Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -5221,7 +5221,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1904
+    "averageCostForTwo": 1153
   },
   {
     "id": "ChIJuW7ENzFBvDsRELOSGXJ1n2w",
@@ -5246,7 +5246,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "NH 66, Kaikini, Bhatkal, Mavalli, Karnataka 581421",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.54
+      "distanceFromTemple": 2.21
     },
     "contact": {
       "phone": "919876543210",
@@ -5269,7 +5269,7 @@ const restaurants: Restaurant[] = [
       "fish"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.442Z",
+    "updatedAt": "2025-11-09T10:28:31.523Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -5322,7 +5322,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1802
+    "averageCostForTwo": 774
   },
   {
     "id": "Reviews: 30 reviews,,093098 86781,,Royal Plate Restaurant (Owner),https://www.google.com/maps/contrib/105709283617289173161,https://lh3.ggpht.com/p/AF1QipMq-zVgpyNcz2JsoF3UXgRAbjj6z54BPQRrujj4=s1024,Family restaurant,Family restaurant",
@@ -5335,7 +5335,7 @@ const restaurants: Restaurant[] = [
       {
         "id": "img-1",
         "type": "image",
-        "url": "behaviour",
+        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
         "alt": "Restaurant,,,Open All Days,Temple Road",
         "isPrimary": true
       }
@@ -5347,7 +5347,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.7
+      "distanceFromTemple": 0.8
     },
     "contact": {
       "phone": "919876543210",
@@ -5369,7 +5369,7 @@ const restaurants: Restaurant[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -5422,7 +5422,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1478
+    "averageCostForTwo": 1796
   },
   {
     "id": "Reviews: 27 reviews,,,,Netrani Cafe (Owner),https://www.google.com/maps/contrib/107669217693172539894,https://lh3.ggpht.com/p/AF1QipOLxDPsGXcNkgYg3Hp5RQFEBYVvKlDjieM06zx9=s1024,Cafe,Cafe",
@@ -5435,7 +5435,7 @@ const restaurants: Restaurant[] = [
       {
         "id": "img-1",
         "type": "image",
-        "url": "roof",
+        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
         "alt": "Coffee shop,,,Open All Days,Netrani Cafe",
         "isPrimary": true
       }
@@ -5447,7 +5447,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.84
+      "distanceFromTemple": 0.91
     },
     "contact": {
       "phone": "919876543210",
@@ -5469,7 +5469,7 @@ const restaurants: Restaurant[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -5522,7 +5522,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1384
+    "averageCostForTwo": 885
   },
   {
     "id": "Reviews: 154 reviews,,098456 90271,,Nayak Fish Land (Owner),https://www.google.com/maps/contrib/100460882514604295924,https://lh3.ggpht.com/p/AF1QipMzOGjfNV5OqfLEnoHGf8TMuMOwl699Aq_1v6jf=s1024,Seafood restaurant,Seafood restaurant",
@@ -5535,7 +5535,7 @@ const restaurants: Restaurant[] = [
       {
         "id": "img-1",
         "type": "image",
-        "url": "rava fry",
+        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
         "alt": "Restaurant,,,Open All Days,Main Road Murdeshwar",
         "isPrimary": true
       }
@@ -5547,7 +5547,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 2.36
+      "distanceFromTemple": 1.19
     },
     "contact": {
       "phone": "919876543210",
@@ -5569,7 +5569,7 @@ const restaurants: Restaurant[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.440Z",
+    "updatedAt": "2025-11-09T10:28:31.521Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -5622,7 +5622,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1214
+    "averageCostForTwo": 1538
   },
   {
     "id": "ChIJDYJDodBGvDsRn6fCnhE_tGA",
@@ -5647,7 +5647,7 @@ const restaurants: Restaurant[] = [
       },
       "address": "Murudeshwar Temple Hwy, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.23
+      "distanceFromTemple": 0.74
     },
     "contact": {
       "phone": "09480462175",
@@ -5674,7 +5674,7 @@ const restaurants: Restaurant[] = [
       "set dosa"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.441Z",
+    "updatedAt": "2025-11-09T10:28:31.522Z",
     "cuisine": [
       "South Indian",
       "North Indian"
@@ -5727,7 +5727,7 @@ const restaurants: Restaurant[] = [
       "Clean"
     ],
     "menu": [],
-    "averageCostForTwo": 1574
+    "averageCostForTwo": 1949
   }
 ];
 
@@ -5756,7 +5756,7 @@ const scubaOperators: ScubaOperator[] = [
       },
       "address": "Netrani, Matadahitlu, Murdeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.93
+      "distanceFromTemple": 1.51
     },
     "contact": {
       "phone": "919876543210",
@@ -5780,7 +5780,7 @@ const scubaOperators: ScubaOperator[] = [
       "adventure"
     ],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "certifications": [
       "PADI",
       "SSI"
@@ -5790,7 +5790,7 @@ const scubaOperators: ScubaOperator[] = [
       "Hindi",
       "Kannada"
     ],
-    "experience": 9,
+    "experience": 7,
     "packages": [
       {
         "id": "pkg-1",
@@ -5807,7 +5807,7 @@ const scubaOperators: ScubaOperator[] = [
         "excludes": [
           "Transport"
         ],
-        "price": 3689,
+        "price": 3941,
         "groupSize": {
           "min": 2,
           "max": 8
@@ -5837,7 +5837,7 @@ const scubaOperators: ScubaOperator[] = [
       {
         "id": "img-1",
         "type": "image",
-        "url": "eels",
+        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
         "alt": "Adventure Sports Center",
         "isPrimary": true
       }
@@ -5849,7 +5849,7 @@ const scubaOperators: ScubaOperator[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 0.92
+      "distanceFromTemple": 1.61
     },
     "contact": {
       "phone": "919876543210",
@@ -5871,7 +5871,7 @@ const scubaOperators: ScubaOperator[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "certifications": [
       "PADI",
       "SSI"
@@ -5881,7 +5881,7 @@ const scubaOperators: ScubaOperator[] = [
       "Hindi",
       "Kannada"
     ],
-    "experience": 5,
+    "experience": 6,
     "packages": [
       {
         "id": "pkg-1",
@@ -5898,7 +5898,7 @@ const scubaOperators: ScubaOperator[] = [
         "excludes": [
           "Transport"
         ],
-        "price": 4029,
+        "price": 3038,
         "groupSize": {
           "min": 2,
           "max": 8
@@ -5928,7 +5928,7 @@ const scubaOperators: ScubaOperator[] = [
       {
         "id": "img-1",
         "type": "image",
-        "url": "washroom",
+        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
         "alt": "Diving center",
         "isPrimary": true
       }
@@ -5940,7 +5940,7 @@ const scubaOperators: ScubaOperator[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.43
+      "distanceFromTemple": 1.44
     },
     "contact": {
       "phone": "919876543210",
@@ -5962,7 +5962,7 @@ const scubaOperators: ScubaOperator[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "certifications": [
       "PADI",
       "SSI"
@@ -5972,7 +5972,7 @@ const scubaOperators: ScubaOperator[] = [
       "Hindi",
       "Kannada"
     ],
-    "experience": 8,
+    "experience": 5,
     "packages": [
       {
         "id": "pkg-1",
@@ -5989,7 +5989,7 @@ const scubaOperators: ScubaOperator[] = [
         "excludes": [
           "Transport"
         ],
-        "price": 4683,
+        "price": 4035,
         "groupSize": {
           "min": 2,
           "max": 8
@@ -6019,7 +6019,7 @@ const scubaOperators: ScubaOperator[] = [
       {
         "id": "img-1",
         "type": "image",
-        "url": "cooperative",
+        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
         "alt": "SCUBA instructor,Open 24 hours,,Open All Days,Main Road",
         "isPrimary": true
       }
@@ -6031,7 +6031,7 @@ const scubaOperators: ScubaOperator[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.55
+      "distanceFromTemple": 0.5
     },
     "contact": {
       "phone": "919876543210",
@@ -6053,7 +6053,7 @@ const scubaOperators: ScubaOperator[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "certifications": [
       "PADI",
       "SSI"
@@ -6063,7 +6063,7 @@ const scubaOperators: ScubaOperator[] = [
       "Hindi",
       "Kannada"
     ],
-    "experience": 5,
+    "experience": 10,
     "packages": [
       {
         "id": "pkg-1",
@@ -6080,7 +6080,7 @@ const scubaOperators: ScubaOperator[] = [
         "excludes": [
           "Transport"
         ],
-        "price": 4699,
+        "price": 3518,
         "groupSize": {
           "min": 2,
           "max": 8
@@ -6110,7 +6110,7 @@ const scubaOperators: ScubaOperator[] = [
       {
         "id": "img-1",
         "type": "image",
-        "url": "cooperative",
+        "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
         "alt": "Dive shop,7 am–7 pm,,Open All Days,Golf Beach road",
         "isPrimary": true
       }
@@ -6122,7 +6122,7 @@ const scubaOperators: ScubaOperator[] = [
       },
       "address": "Murudeshwar, Karnataka 581350",
       "landmark": "Near Murudeshwar Temple",
-      "distanceFromTemple": 1.21
+      "distanceFromTemple": 1.74
     },
     "contact": {
       "phone": "919876543210",
@@ -6144,7 +6144,7 @@ const scubaOperators: ScubaOperator[] = [
     "isVerified": true,
     "tags": [],
     "createdAt": "2024-01-01T00:00:00Z",
-    "updatedAt": "2025-11-09T09:16:33.445Z",
+    "updatedAt": "2025-11-09T10:28:31.527Z",
     "certifications": [
       "PADI",
       "SSI"
@@ -6154,7 +6154,7 @@ const scubaOperators: ScubaOperator[] = [
       "Hindi",
       "Kannada"
     ],
-    "experience": 5,
+    "experience": 14,
     "packages": [
       {
         "id": "pkg-1",
@@ -6171,7 +6171,7 @@ const scubaOperators: ScubaOperator[] = [
         "excludes": [
           "Transport"
         ],
-        "price": 4116,
+        "price": 3645,
         "groupSize": {
           "min": 2,
           "max": 8

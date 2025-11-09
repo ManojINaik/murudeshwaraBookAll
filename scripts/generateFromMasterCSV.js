@@ -56,6 +56,12 @@ function cleanPhone(phone) {
   return cleaned || '919876543210';
 }
 
+// Validate if string is a valid image URL
+function isValidImageUrl(url) {
+  if (!url || typeof url !== 'string') return false;
+  return url.startsWith('http://') || url.startsWith('https://');
+}
+
 // Determine provider type from category
 function getProviderType(category, mainCategory, categories) {
   const catStr = (category + ' ' + mainCategory + ' ' + categories).toLowerCase();
@@ -107,7 +113,7 @@ function csvRowToProvider(row) {
       {
         id: 'img-1',
         type: 'image',
-        url: row.featured_image || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800',
+        url: isValidImageUrl(row.featured_image) ? row.featured_image : 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800',
         alt: row.name || 'Property image',
         isPrimary: true
       }
@@ -146,7 +152,7 @@ function csvRowToProvider(row) {
       capacity: 2,
       bedType: 'Queen Bed',
       area: 250,
-      images: [{ id: 'room-img-1', type: 'image', url: row.featured_image || 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800', alt: 'Room' }],
+      images: [{ id: 'room-img-1', type: 'image', url: isValidImageUrl(row.featured_image) ? row.featured_image : 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800', alt: 'Room' }],
       amenities: 'hotelAmenities.slice(0, 4)',
       basePrice: 2000 + Math.floor(Math.random() * 5000),
       taxes: 360,
