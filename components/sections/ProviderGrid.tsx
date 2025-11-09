@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Star } from 'lucide-react';
 import { allProviders } from '@/data/providers';
 import { Provider } from '@/types';
@@ -160,11 +161,13 @@ export function ProviderGrid() {
 
         {/* View All Button */}
         <div className="text-center mt-16">
-          <button className="bg-primary-50 shadow-neumorphic hover:shadow-neumorphic-inset px-12 py-4 rounded-3xl font-bold text-xl text-neutral-700 transition-all duration-300 transform hover:scale-105">
-            <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-              View All Properties
-            </span>
-          </button>
+          <Link href="/properties">
+            <button className="bg-primary-50 shadow-neumorphic hover:shadow-neumorphic-inset px-12 py-4 rounded-3xl font-bold text-xl text-neutral-700 transition-all duration-300 transform hover:scale-105">
+              <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                View All Properties
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

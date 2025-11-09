@@ -1,9 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { Search, MapPin, ArrowRight, Sparkles } from 'lucide-react';
+import { hotels } from '@/data/providers';
 
 export function SearchHotels() {
+  const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
   const [isFocused, setIsFocused] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
@@ -19,19 +22,16 @@ export function SearchHotels() {
   }, []);
 
   const handleSearch = () => {
-    // Handle the hotel search functionality
-    console.log('Searching for hotels in Murudeshwar:', searchTerm);
-    // Here you would typically redirect to a search results page or filter results
+    // Navigate to properties page with search term
+    if (searchTerm.trim()) {
+      router.push(`/properties?search=${encodeURIComponent(searchTerm)}`);
+    } else {
+      router.push('/properties');
+    }
   };
 
-  // Placeholder suggestions that could be populated from an API
-  const suggestions = [
-    'Kamath Yatri Nivas',
-    'RNS Residency',
-    'Aryan Residency',
-    'Temple View Rooms',
-    'Beach Resorts'
-  ];
+  // Real hotel names from CSV data
+  const suggestions = hotels.slice(0, 5).map(hotel => hotel.name);
 
   return (
     <div 
