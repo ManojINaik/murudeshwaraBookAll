@@ -14,7 +14,7 @@ export function HeroSection() {
             <img
               src="/shiva-statue-7.png"
               alt="Murudeshwar Temple and Lord Shiva statue overlooking the Arabian Sea"
-              className="absolute inset-0 w-full h-full object-cover object-center scale-75"
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
